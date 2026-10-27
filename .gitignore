@@ -1,0 +1,18 @@
+# Build output
+bin/
+out/
+*.prg
+*.prg.debug.xml
+*.iq
+gen/
+mir/
+
+# Signing key - never commit this
+developer_key
+*.der
+*.pem
+
+# Editor / OS
+.vscode/settings.json
+.DS_Store
+Thumbs.db

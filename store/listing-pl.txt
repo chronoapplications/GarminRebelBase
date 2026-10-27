@@ -1,0 +1,45 @@
+REBEL BASE — opis w sklepie Connect IQ (polski)
+================================================
+
+NAZWA
+Rebel Base
+
+KRÓTKI OPIS
+Retro tarcza sci-fi w stylu grafiki wektorowej: trzy taktyczne style, odliczania na żywo oraz prawdziwe dane o Księżycu i Słońcu.
+
+OPIS
+Przenieś na nadgarstek ekran centrum dowodzenia rodem z lat 70. Rebel Base rysuje wszystko świecącymi liniami wektorowymi na czarnym tle, jak dawny komputer taktyczny, i zamienia Twój dzień w odliczania na żywo.
+
+TRZY STYLE
+- Orbita: gazowy olbrzym wypełnia lewą część ekranu. Co godzinę szkieletowy księżyc przesuwa się po jego tarczy w stronę celu, a W ZASIĘGU odlicza minuty do chwili, gdy minie krawędź planety. O pełnej godzinie cel zostaje namierzony, a licznik pokazuje TERAZ. Linia dnia i nocy na planecie podąża za prawdziwym wschodem i zachodem Słońca, a księżyc pokazuje aktualną fazę.
+- Celowanie: lot szkieletowym kanionem w stronę celownika. Licznik pokazuje, ile kroków brakuje do dziennego celu. Gdy go osiągniesz, pojawia się CEL NAMIERZONY i pulsujący rozbłysk.
+- Radar: wiązka obiega ekran raz na minutę, a godzina i minuta to punkty na radarze. Nieprzeczytane powiadomienia pojawiają się jako kontakty, które rozbłyskują, gdy mija je wiązka.
+
+DOPASUJ DO SIEBIE
+- 10 kolorów dla głównego wyświetlacza, akcentu i planety
+- 3 pola danych: tętno, bateria, Body Battery, stres, kalorie, dystans, piętra, powiadomienia lub kroki
+- Ikona pogody i temperatura z zegarka
+- Postęp dziennego celu kroków na tarczy (Celowanie i Radar)
+
+PRZYTRZYMAJ dowolny odczyt, aby otworzyć jego widżet: tętno, Body Battery, pogodę, kroki, powiadomienia i inne.
+
+PRZYJAZNA TRYBOWI ALWAYS-ON: minimalistyczny widok chroniący ekrany AMOLED przed wypaleniem, z godziną i zarysem wybranego stylu.
+
+Styl, kolory i pola zmienisz w menu Tarcza zegarka > Dostosuj na zegarku albo w aplikacji Connect IQ.
+
+Języki: angielski, polski.
+
+UPRAWNIENIA
+- Historia czujników: odczyt Body Battery i stresu do pól danych.
+- Komplikacje: otwieranie widżetu po przytrzymaniu odczytu.
+
+Żadne dane nie opuszczają zegarka.
+
+CO NOWEGO (1.0)
+Pierwsze wydanie: style Orbita, Celowanie i Radar, własne kolory i pola danych, pogoda, faza Księżyca, otwieranie widżetów przytrzymaniem. Wersje językowe: angielska i polska.
+
+KATEGORIA
+Tarcze zegarka
+
+SŁOWA KLUCZOWE
+retro, wektor, sci-fi, kosmos, planeta, radar, taktyczna, odliczanie, szkielet, zielona, faza księżyca

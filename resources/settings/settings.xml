@@ -1,0 +1,93 @@
+<settings>
+    <setting propertyKey="@Properties.Style" title="@Strings.StyleTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.StyleOrbit</listEntry>
+            <listEntry value="1">@Strings.StyleTarget</listEntry>
+            <listEntry value="2">@Strings.StyleRadar</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.Theme" title="@Strings.ThemeTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorGreen</listEntry>
+            <listEntry value="1">@Strings.ColorAmber</listEntry>
+            <listEntry value="2">@Strings.ColorCyan</listEntry>
+            <listEntry value="3">@Strings.ColorRed</listEntry>
+            <listEntry value="4">@Strings.ColorWhite</listEntry>
+            <listEntry value="5">@Strings.ColorMagenta</listEntry>
+            <listEntry value="6">@Strings.ColorYellow</listEntry>
+            <listEntry value="7">@Strings.ColorBlue</listEntry>
+            <listEntry value="8">@Strings.ColorOrange</listEntry>
+            <listEntry value="9">@Strings.ColorPurple</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.Accent" title="@Strings.AccentTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorGreen</listEntry>
+            <listEntry value="1">@Strings.ColorAmber</listEntry>
+            <listEntry value="2">@Strings.ColorCyan</listEntry>
+            <listEntry value="3">@Strings.ColorRed</listEntry>
+            <listEntry value="4">@Strings.ColorWhite</listEntry>
+            <listEntry value="5">@Strings.ColorMagenta</listEntry>
+            <listEntry value="6">@Strings.ColorYellow</listEntry>
+            <listEntry value="7">@Strings.ColorBlue</listEntry>
+            <listEntry value="8">@Strings.ColorOrange</listEntry>
+            <listEntry value="9">@Strings.ColorPurple</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.Planet" title="@Strings.PlanetTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorGreen</listEntry>
+            <listEntry value="1">@Strings.ColorAmber</listEntry>
+            <listEntry value="2">@Strings.ColorCyan</listEntry>
+            <listEntry value="3">@Strings.ColorRed</listEntry>
+            <listEntry value="4">@Strings.ColorWhite</listEntry>
+            <listEntry value="5">@Strings.ColorMagenta</listEntry>
+            <listEntry value="6">@Strings.ColorYellow</listEntry>
+            <listEntry value="7">@Strings.ColorBlue</listEntry>
+            <listEntry value="8">@Strings.ColorOrange</listEntry>
+            <listEntry value="9">@Strings.ColorPurple</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.Field1" title="@Strings.Field1Title">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.FieldHr</listEntry>
+            <listEntry value="1">@Strings.FieldBattery</listEntry>
+            <listEntry value="2">@Strings.FieldBody</listEntry>
+            <listEntry value="3">@Strings.FieldStress</listEntry>
+            <listEntry value="4">@Strings.FieldCalories</listEntry>
+            <listEntry value="5">@Strings.FieldDistance</listEntry>
+            <listEntry value="6">@Strings.FieldFloors</listEntry>
+            <listEntry value="7">@Strings.FieldNotifications</listEntry>
+            <listEntry value="8">@Strings.FieldSteps</listEntry>
+            <listEntry value="9">@Strings.FieldNone</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.Field2" title="@Strings.Field2Title">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.FieldHr</listEntry>
+            <listEntry value="1">@Strings.FieldBattery</listEntry>
+            <listEntry value="2">@Strings.FieldBody</listEntry>
+            <listEntry value="3">@Strings.FieldStress</listEntry>
+            <listEntry value="4">@Strings.FieldCalories</listEntry>
+            <listEntry value="5">@Strings.FieldDistance</listEntry>
+            <listEntry value="6">@Strings.FieldFloors</listEntry>
+            <listEntry value="7">@Strings.FieldNotifications</listEntry>
+            <listEntry value="8">@Strings.FieldSteps</listEntry>
+            <listEntry value="9">@Strings.FieldNone</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.Field3" title="@Strings.Field3Title">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.FieldHr</listEntry>
+            <listEntry value="1">@Strings.FieldBattery</listEntry>
+            <listEntry value="2">@Strings.FieldBody</listEntry>
+            <listEntry value="3">@Strings.FieldStress</listEntry>
+            <listEntry value="4">@Strings.FieldCalories</listEntry>
+            <listEntry value="5">@Strings.FieldDistance</listEntry>
+            <listEntry value="6">@Strings.FieldFloors</listEntry>
+            <listEntry value="7">@Strings.FieldNotifications</listEntry>
+            <listEntry value="8">@Strings.FieldSteps</listEntry>
+            <listEntry value="9">@Strings.FieldNone</listEntry>
+        </settingConfig>
+    </setting>
+</settings>

@@ -1,0 +1,28 @@
+Retro sci-fi vector watch face with three tactical styles, live countdowns and real moon and sun data.
+
+Bring a late-70s mission-control display to your wrist. Rebel Base draws everything as glowing vector lines on black, like an old tactical computer, and turns your day into live countdowns.
+
+THREE STYLES
+- Orbit Tracker: a gas giant fills the left of the screen. Each hour a wireframe moon crosses its face toward a target, and IN RANGE counts down the minutes until it clears the planet's edge. At the top of the hour the target locks and the countdown reads NOW. The planet's day/night line follows your real sunrise and sunset, and the moon shows tonight's actual phase.
+- Targeting: fly down a wireframe trench toward a reticle. The countdown is the number of steps left to your daily goal. Reach it and the target locks with a pulsing burst.
+- Radar: a sweep turns once a minute, with hour and minute blips. Unread notifications appear as contacts that light up as the sweep passes them.
+
+MAKE IT YOURS
+- 10 colors each for the main display, accent and planet
+- 3 data fields: heart rate, battery, Body Battery, stress, calories, distance, floors, notifications or steps
+- Weather icon and temperature from your watch
+- Step-goal progress on the bezel (Targeting and Radar)
+
+PRESS AND HOLD any readout to open its widget: heart rate, Body Battery, weather, steps, notifications and more.
+
+ALWAYS-ON FRIENDLY: a minimal, burn-in-safe view for AMOLED screens, with the time and an outline of your chosen style.
+
+Change the style, colors and fields on the watch (Watch Face, then Customize), or in the Connect IQ app.
+
+Languages: English, Polish.
+
+PERMISSIONS
+- Sensor history: reads Body Battery and stress for the data fields.
+- Complications: opens the matching watch widget when you press and hold a readout.
+
+No data leaves your watch.
