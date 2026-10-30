@@ -10,6 +10,7 @@
     <string id="Field1Title">Pole 1</string>
     <string id="Field2Title">Pole 2</string>
     <string id="Field3Title">Pole 3</string>
+    <string id="ShowSecondsTitle">Pokaż sekundy</string>
     <string id="Current">Wybrany</string>
     <string id="ColorGreen">Zielony</string>
     <string id="ColorAmber">Bursztynowy</string>
@@ -31,6 +32,7 @@
     <string id="FieldNotifications">Powiadomienia</string>
     <string id="FieldSteps">Kroki</string>
     <string id="FieldNone">Brak</string>
+    <string id="FieldSeconds">Sekundy</string>
     <string id="LblHr">TĘTNO</string>
     <string id="LblBat">BAT</string>
     <string id="LblBatPct">BAT%</string>
@@ -42,6 +44,7 @@
     <string id="LblFloors">PIĘTRA</string>
     <string id="LblMsgs">POWIAD</string>
     <string id="LblSteps">KROKI</string>
+    <string id="LblSec">SEK</string>
     <string id="LongBat">BATERIA</string>
     <string id="LongBody">BODY BATT</string>
     <string id="LongStress">STRES</string>

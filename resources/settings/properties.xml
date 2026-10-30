@@ -5,8 +5,10 @@
     <property id="Theme" type="number">0</property>
     <property id="Accent" type="number">3</property>
     <property id="Planet" type="number">3</property>
-    <!-- field types, see source/Fields.mc (0 HR, 1 battery, ... 8 steps, 9 none) -->
+    <!-- field types, see source/Fields.mc (0 HR, 1 battery, ... 8 steps, 9 none, 10 seconds) -->
     <property id="Field1" type="number">0</property>
     <property id="Field2" type="number">1</property>
     <property id="Field3" type="number">8</property>
+    <!-- small seconds after HH:MM while the screen is awake -->
+    <property id="ShowSeconds" type="boolean">false</property>
 </properties>

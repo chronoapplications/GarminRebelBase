@@ -15,6 +15,7 @@ const FIELD_FLOORS = 6;
 const FIELD_NOTIFICATIONS = 7;
 const FIELD_STEPS = 8;
 const FIELD_NONE = 9;
+const FIELD_SECONDS = 10;
 
 // Tap target for the weather readout (not a selectable field).
 const TARGET_WEATHER = 100;
@@ -28,7 +29,7 @@ function fieldNames() as Array<String> {
     return [$.str(Rez.Strings.FieldHr), $.str(Rez.Strings.FieldBattery), $.str(Rez.Strings.FieldBody),
             $.str(Rez.Strings.FieldStress), $.str(Rez.Strings.FieldCalories), $.str(Rez.Strings.FieldDistance),
             $.str(Rez.Strings.FieldFloors), $.str(Rez.Strings.FieldNotifications), $.str(Rez.Strings.FieldSteps),
-            $.str(Rez.Strings.FieldNone)];
+            $.str(Rez.Strings.FieldNone), $.str(Rez.Strings.FieldSeconds)];
 }
 
 function styleNames() as Array<String> {

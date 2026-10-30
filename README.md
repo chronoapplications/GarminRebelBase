@@ -48,7 +48,8 @@ On the watch: long-press the face → **Watch Face** → Rebel Base → **Custom
 | Main color | 10 colors — time, text, lines | Green |
 | Accent color | 10 colors — markers and warnings | Red |
 | Planet color | 10 colors — gas giant, auto-shaded | Red |
-| Field 1 / 2 / 3 | Heart rate, Battery, Body Battery, Stress, Calories, Distance, Floors, Notifications, Steps, None | HR / Battery / Steps |
+| Field 1 / 2 / 3 | Heart rate, Battery, Body Battery, Stress, Calories, Distance, Floors, Notifications, Steps, Seconds, None | HR / Battery / Steps |
+| Show seconds | Small seconds after the time (screen awake only) | Off |
 
 Where the fields appear: in orbit tracker, fields 1 and 2 share a line and field 3 is below. In targeting and radar, fields 1 and 2 are left and right, field 3 is lower left, and weather is lower right.
 

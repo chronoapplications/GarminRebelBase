@@ -113,7 +113,7 @@ class VectorRunView extends WatchUi.WatchFace {
         } else {
             drawStepBezel(dc, data[:progress] as Float);
             drawDate(dc, _cx, s(40));
-            drawTime(dc, clock, _cx, s(64), s(30), s(52), s(5));
+            drawTime(dc, clock, _cx, s(64), s(30), s(52), s(5), $.showSeconds());
             if (style == 2) {
                 drawRadar(dc, clock, data);
             } else {
@@ -349,11 +349,12 @@ class VectorRunView extends WatchUi.WatchFace {
         var hr = $.str(Rez.Strings.LblHr);
         var kcal = $.str(Rez.Strings.LblKcal);
         var steps = $.str(Rez.Strings.LblSteps);
+        var sec = $.str(Rez.Strings.LblSec);
         // indexed by FIELD_* (distance is handled separately for km / mi)
         _lblShort = [hr, $.str(Rez.Strings.LblBat), $.str(Rez.Strings.LblBody), $.str(Rez.Strings.LblStress),
-                     kcal, "", $.str(Rez.Strings.LblFloors), $.str(Rez.Strings.LblMsgs), steps, ""];
+                     kcal, "", $.str(Rez.Strings.LblFloors), $.str(Rez.Strings.LblMsgs), steps, "", sec];
         _lblLong = [hr, $.str(Rez.Strings.LongBat), $.str(Rez.Strings.LongBody), $.str(Rez.Strings.LongStress),
-                    kcal, "", $.str(Rez.Strings.LongFloors), $.str(Rez.Strings.LongMsgs), steps, ""];
+                    kcal, "", $.str(Rez.Strings.LongFloors), $.str(Rez.Strings.LongMsgs), steps, "", sec];
         _txt = {
             :batPct => $.str(Rez.Strings.LblBatPct),
             :km => $.str(Rez.Strings.LblKm),
@@ -425,6 +426,7 @@ class VectorRunView extends WatchUi.WatchFace {
         if (type == $.FIELD_FLOORS) { return (data[:floors] as Number).format("%d"); }
         if (type == $.FIELD_NOTIFICATIONS) { return (data[:notifs] as Number).format("%d"); }
         if (type == $.FIELD_STEPS) { return (data[:steps] as Number).format("%d"); }
+        if (type == $.FIELD_SECONDS) { return System.getClockTime().sec.format("%02d"); }
         return "";
     }
 
@@ -518,9 +520,11 @@ class VectorRunView extends WatchUi.WatchFace {
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
-    // HH:MM in seven-segment digits, centred on x, top edge at y.
+    // HH:MM in seven-segment digits, centred on x, top edge at y. With
+    // withSec, HH:MM shrinks a little and small seconds follow it, sharing
+    // its bottom edge, so nothing below the time moves.
     private function drawTime(dc as Dc, clock as System.ClockTime, x as Number, y as Number,
-                              dw as Number, dh as Number, pen as Number) as Void {
+                              dw as Number, dh as Number, pen as Number, withSec as Boolean) as Void {
         var hour = clock.hour;
         if (!System.getDeviceSettings().is24Hour) {
             hour = hour % 12;
@@ -528,8 +532,25 @@ class VectorRunView extends WatchUi.WatchFace {
                 hour = 12;
             }
         }
+        var sw = 0;
+        var sh = 0;
+        var sGap = 0;
+        var sPen = pen;
+        var sLead = 0;
+        if (withSec) {
+            var dh2 = dh * 9 / 10;
+            y += dh - dh2;
+            dh = dh2;
+            dw = dw * 4 / 5;
+            sw = dw * 2 / 3;
+            sh = dh * 3 / 5;
+            sGap = sw / 2 > s(5) ? sw / 2 : s(5);
+            sPen = pen * 4 / 5 > 2 ? pen * 4 / 5 : 2;
+            sLead = s(12);
+        }
         var gap = dw / 2;
-        var px = x - (dw * 4 + gap * 4) / 2;
+        var hmW = dw * 4 + gap * 4;
+        var px = x - (withSec ? hmW + sLead + sw * 2 + sGap : hmW) / 2;
 
         dc.setPenWidth(pen);
         dc.setColor(_main, Graphics.COLOR_TRANSPARENT);
@@ -543,6 +564,12 @@ class VectorRunView extends WatchUi.WatchFace {
         drawDigit(dc, px, y, dw, dh, clock.min / 10, pen);
         px += dw + gap;
         drawDigit(dc, px, y, dw, dh, clock.min % 10, pen);
+        if (withSec) {
+            px += dw + sLead;
+            dc.setPenWidth(sPen);
+            drawDigit(dc, px, y + dh - sh, sw, sh, clock.sec / 10, sPen);
+            drawDigit(dc, px + sw + sGap, y + dh - sh, sw, sh, clock.sec % 10, sPen);
+        }
     }
 
     // One seven-segment digit; uses the current colour and pen width.
@@ -800,7 +827,7 @@ class VectorRunView extends WatchUi.WatchFace {
         }
 
         // time, date and weather
-        drawTime(dc, clock, s(290), s(64), s(26), s(48), s(5));
+        drawTime(dc, clock, s(290), s(64), s(26), s(48), s(5), $.showSeconds());
         if (_temp != null && _cond != null) {
             drawDate(dc, s(280), s(136));
             drawWeatherIcon(dc, s(354), s(136), s(11), _cond as Number);
@@ -1305,7 +1332,7 @@ class VectorRunView extends WatchUi.WatchFace {
             dc.drawCircle(mx, my, mr);
             dc.drawLine(mx - mr, my, mx + mr, my);
             dc.drawLine(mx, my - mr, mx, my + mr);
-            drawTime(dc, clock, s(304) + dx, _cy - s(26) + dy, s(26), s(52), s(2));
+            drawTime(dc, clock, s(304) + dx, _cy - s(26) + dy, s(26), s(52), s(2), false);
         } else if (style == 1) {
             dc.setColor(line, Graphics.COLOR_TRANSPARENT);
             var vx = _cx + dx;
@@ -1316,7 +1343,7 @@ class VectorRunView extends WatchUi.WatchFace {
             var bottom = s(318) + dy;
             drawTrenchRails(dc, vx, vy, left, top, right, bottom);
             drawTrenchSection(dc, vx, vy, left, top, right, bottom, 1.0);
-            drawTime(dc, clock, _cx + dx, s(64) + dy, s(30), s(52), s(2));
+            drawTime(dc, clock, _cx + dx, s(64) + dy, s(30), s(52), s(2), false);
         } else {
             dc.setColor(line, Graphics.COLOR_TRANSPARENT);
             var rx = _cx + dx;
@@ -1327,7 +1354,7 @@ class VectorRunView extends WatchUi.WatchFace {
             var ma = clock.min * Math.PI / 30.0;
             dc.setColor(_accent, Graphics.COLOR_TRANSPARENT);
             dc.fillCircle(rx + s(90) * Math.sin(ma), ry - s(90) * Math.cos(ma), s(5));
-            drawTime(dc, clock, _cx + dx, s(64) + dy, s(30), s(52), s(2));
+            drawTime(dc, clock, _cx + dx, s(64) + dy, s(30), s(52), s(2), false);
         }
     }
 }

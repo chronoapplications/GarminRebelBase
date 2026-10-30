@@ -17,7 +17,8 @@ THREE STYLES
 
 MAKE IT YOURS
 - 10 colors each for the main display, accent and planet
-- 3 data fields: heart rate, battery, Body Battery, stress, calories, distance, floors, notifications or steps
+- 3 data fields: heart rate, battery, Body Battery, stress, calories, distance, floors, notifications, steps or seconds
+- Optional small seconds next to the time
 - Weather icon and temperature from your watch
 - Step-goal progress on the bezel (Targeting and Radar)
 
@@ -25,7 +26,7 @@ PRESS AND HOLD any readout to open its widget: heart rate, Body Battery, weather
 
 ALWAYS-ON FRIENDLY: a minimal, burn-in-safe view for AMOLED screens, with the time and an outline of your chosen style.
 
-Change the style, colors and fields under Watch Face > Customize on the watch, or in the Connect IQ app.
+Change the style, colors and fields on the watch (Watch Face, then Customize), or in the Connect IQ app.
 
 Languages: English, Polish.
 
@@ -34,6 +35,9 @@ PERMISSIONS
 - Complications: opens the matching watch widget when you press and hold a readout.
 
 No data leaves your watch.
+
+WHAT'S NEW (1.1)
+Seconds: pick Seconds for any data field, or turn on Show seconds to see them next to the time. Seconds show while the screen is on; the always-on view stays minimal.
 
 WHAT'S NEW (1.0)
 First release: Orbit Tracker, Targeting and Radar styles, custom colors and data fields, weather, moon phase, press-and-hold widgets. English and Polish.

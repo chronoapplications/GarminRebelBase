@@ -10,6 +10,7 @@
     <string id="Field1Title">Field 1</string>
     <string id="Field2Title">Field 2</string>
     <string id="Field3Title">Field 3</string>
+    <string id="ShowSecondsTitle">Show seconds</string>
     <string id="Current">Current</string>
     <string id="ColorGreen">Green</string>
     <string id="ColorAmber">Amber</string>
@@ -31,6 +32,7 @@
     <string id="FieldNotifications">Notifications</string>
     <string id="FieldSteps">Steps</string>
     <string id="FieldNone">None</string>
+    <string id="FieldSeconds">Seconds</string>
     <string id="LblHr">HR</string>
     <string id="LblBat">BAT</string>
     <string id="LblBatPct">BAT%</string>
@@ -42,6 +44,7 @@
     <string id="LblFloors">FLRS</string>
     <string id="LblMsgs">MSGS</string>
     <string id="LblSteps">STEPS</string>
+    <string id="LblSec">SEC</string>
     <string id="LongBat">BATTERY</string>
     <string id="LongBody">BODY BATT</string>
     <string id="LongStress">STRESS</string>

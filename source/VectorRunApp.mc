@@ -30,6 +30,11 @@ class VectorRunApp extends Application.AppBase {
     }
 }
 
+// "Show seconds" setting (off by default).
+function showSeconds() as Boolean {
+    return Application.Properties.getValue("ShowSeconds") == true;
+}
+
 // Reads a numeric setting, falling back to a default.
 function getProp(key as String, def as Number) as Number {
     var v = Application.Properties.getValue(key);

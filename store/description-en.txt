@@ -9,7 +9,8 @@ THREE STYLES
 
 MAKE IT YOURS
 - 10 colors each for the main display, accent and planet
-- 3 data fields: heart rate, battery, Body Battery, stress, calories, distance, floors, notifications or steps
+- 3 data fields: heart rate, battery, Body Battery, stress, calories, distance, floors, notifications, steps or seconds
+- Optional small seconds next to the time
 - Weather icon and temperature from your watch
 - Step-goal progress on the bezel (Targeting and Radar)
 

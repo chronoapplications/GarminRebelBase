@@ -14,6 +14,8 @@ class VectorSettingsMenu extends WatchUi.Menu2 {
         addEntry(Rez.Strings.Field1Title, "Field1");
         addEntry(Rez.Strings.Field2Title, "Field2");
         addEntry(Rez.Strings.Field3Title, "Field3");
+        addItem(new WatchUi.ToggleMenuItem($.str(Rez.Strings.ShowSecondsTitle), null, :ShowSeconds,
+                                           $.showSeconds(), null));
     }
 
     private function addEntry(labelId as ResourceId, key as String) as Void {
@@ -32,6 +34,11 @@ class VectorSettingsDelegate extends WatchUi.Menu2InputDelegate {
     }
 
     function onSelect(item as MenuItem) as Void {
+        if (item instanceof WatchUi.ToggleMenuItem) {
+            Application.Properties.setValue("ShowSeconds", (item as WatchUi.ToggleMenuItem).isEnabled());
+            WatchUi.requestUpdate();
+            return;
+        }
         var id = item.getId();
         if (id instanceof String) {
             WatchUi.pushView(new ListPickerMenu(id, item.getLabel()),
@@ -48,11 +55,18 @@ class ListPickerMenu extends WatchUi.Menu2 {
         var names = $.namesFor(key);
         var current = $.getProp(key, $.settingDefault(key));
         var mark = $.str(Rez.Strings.Current);
-        for (var i = 0; i < names.size(); i++) {
+        // field lists show Seconds (stored as 10) above None (9)
+        var isField = key.find("Field") != null;
+        var focus = -1;
+        for (var pos = 0; pos < names.size(); pos++) {
+            var i = (isField && pos >= 9) ? 19 - pos : pos;
             addItem(new WatchUi.MenuItem(names[i], i == current ? mark : null, i, null));
+            if (i == current) {
+                focus = pos;
+            }
         }
-        if (current >= 0 && current < names.size()) {
-            setFocus(current);
+        if (focus >= 0) {
+            setFocus(focus);
         }
     }
 }

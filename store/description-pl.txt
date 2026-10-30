@@ -9,7 +9,8 @@ TRZY STYLE
 
 DOPASUJ DO SIEBIE
 - 10 kolorów dla głównego wyświetlacza, akcentu i planety
-- 3 pola danych: tętno, bateria, Body Battery, stres, kalorie, dystans, piętra, powiadomienia lub kroki
+- 3 pola danych: tętno, bateria, Body Battery, stres, kalorie, dystans, piętra, powiadomienia, kroki lub sekundy
+- Opcjonalne małe sekundy obok godziny
 - Ikona pogody i temperatura z zegarka
 - Postęp dziennego celu kroków na tarczy (Celowanie i Radar)
 
