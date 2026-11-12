@@ -1,0 +1,50 @@
+REBEL BASE — Connect IQ store listing (Français)
+================================================
+
+NOM DE L'APPLICATION
+Rebel Base
+
+DESCRIPTION COURTE
+Cadran rétro de science-fiction en graphismes vectoriels : trois styles tactiques, des comptes à rebours en direct et les vraies données de la Lune et du Soleil.
+
+DESCRIPTION
+Portez à votre poignet un écran de centre de contrôle de la fin des années 70. Rebel Base dessine tout en lignes vectorielles lumineuses sur fond noir, comme un vieil ordinateur tactique, et transforme votre journée en comptes à rebours en direct.
+
+TROIS STYLES
+- Suivi orbital : une géante gazeuse occupe la gauche de l'écran. Chaque heure, une lune en fil de fer traverse sa surface vers une cible, et À PORTÉE compte les minutes jusqu'à ce qu'elle dépasse le bord de la planète. À l'heure pile, la cible est verrouillée et le compte à rebours affiche MAINTENANT. La ligne jour/nuit de la planète suit vos vrais lever et coucher du soleil, et la lune montre la phase réelle du moment.
+- Ciblage : volez dans une tranchée en fil de fer vers un réticule. Le compte à rebours indique le nombre de pas restants avant votre objectif quotidien. Atteignez-le et la cible se verrouille dans un éclat pulsant.
+- Radar : un faisceau fait un tour par minute, avec des points pour l'heure et la minute. Les notifications non lues apparaissent comme des contacts qui s'illuminent au passage du faisceau.
+
+PERSONNALISEZ-LE
+- 10 couleurs chacune pour l'affichage principal, l'accent et la planète
+- 3 champs de données : fréquence cardiaque, batterie, Body Battery, stress, calories, distance, étages, notifications, pas, secondes, lever/coucher du soleil, minutes intensives ou altitude
+- Alerte batterie faible : la valeur de la batterie change de couleur à 15 %
+- Petites secondes à côté de l'heure, en option
+- Chiffres inclinés et effet CRT avec lignes de balayage, en option
+- Icône météo et température depuis votre montre
+- Progression de l'objectif de pas sur la lunette (Ciblage et Radar)
+
+APPUI LONG sur une valeur pour ouvrir son widget : fréquence cardiaque, Body Battery, météo, pas, notifications et plus encore.
+
+COMPATIBLE ALWAYS-ON : une vue minimale, sans risque de marquage pour les écrans AMOLED, avec l'heure et le contour du style choisi.
+
+Modifiez le style, les couleurs et les champs sur la montre (Cadran de montre, puis Personnaliser) ou dans l'application Connect IQ.
+
+Langues : anglais, polonais, allemand, français, espagnol.
+
+AUTORISATIONS
+- Historique des capteurs : lit Body Battery et le stress pour les champs de données.
+- Complications : ouvre le widget correspondant lors d'un appui long sur une valeur.
+
+Aucune donnée ne quitte votre montre.
+
+NOUVEAUTÉS (1.2)
+- Suivi orbital : champ d'étoiles
+- Ciblage : compteurs défilants, lignes de panneaux au sol et sur les parois, et crochets qui se resserrent à l'approche de votre objectif de pas
+- Nouvelles options : Chiffres inclinés et Effet CRT
+- Nouveaux champs de données : prochain lever ou coucher du soleil, minutes intensives hebdomadaires, altitude
+- La batterie passe à la couleur d'accent à 15 % ou moins
+- Allemand, français et espagnol
+- Heure sur 12 heures : sans zéro initial, avec un petit A ou P
+- Les étages affichent -- sur les montres sans baromètre
+- Moins de travail en arrière-plan en mode always-on

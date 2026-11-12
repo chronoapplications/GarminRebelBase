@@ -9,8 +9,10 @@ THREE STYLES
 
 MAKE IT YOURS
 - 10 colors each for the main display, accent and planet
-- 3 data fields: heart rate, battery, Body Battery, stress, calories, distance, floors, notifications, steps or seconds
+- 3 data fields: heart rate, battery, Body Battery, stress, calories, distance, floors, notifications, steps, seconds, sunrise/sunset, intensity minutes or altitude
+- Low-battery warning: the battery reading changes color at 15%
 - Optional small seconds next to the time
+- Optional slanted digits and CRT glow with scanlines
 - Weather icon and temperature from your watch
 - Step-goal progress on the bezel (Targeting and Radar)
 
@@ -20,7 +22,7 @@ ALWAYS-ON FRIENDLY: a minimal, burn-in-safe view for AMOLED screens, with the ti
 
 Change the style, colors and fields on the watch (Watch Face, then Customize), or in the Connect IQ app.
 
-Languages: English, Polish.
+Languages: English, Polish, German, French, Spanish.
 
 PERMISSIONS
 - Sensor history: reads Body Battery and stress for the data fields.

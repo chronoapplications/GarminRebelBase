@@ -17,8 +17,10 @@ TRZY STYLE
 
 DOPASUJ DO SIEBIE
 - 10 kolorów dla głównego wyświetlacza, akcentu i planety
-- 3 pola danych: tętno, bateria, Body Battery, stres, kalorie, dystans, piętra, powiadomienia, kroki lub sekundy
+- 3 pola danych: tętno, bateria, Body Battery, stres, kalorie, dystans, piętra, powiadomienia, kroki, sekundy, wschód/zachód słońca, minuty intensywne lub wysokość
+- Ostrzeżenie o niskim stanie baterii: odczyt zmienia kolor przy 15%
 - Opcjonalne małe sekundy obok godziny
+- Opcjonalne pochylone cyfry oraz poświata CRT z liniami
 - Ikona pogody i temperatura z zegarka
 - Postęp dziennego celu kroków na tarczy (Celowanie i Radar)
 
@@ -28,13 +30,24 @@ PRZYJAZNA TRYBOWI ALWAYS-ON: minimalistyczny widok chroniący ekrany AMOLED prze
 
 Styl, kolory i pola zmienisz na zegarku (Tarcza zegarka, a potem Dostosuj) albo w aplikacji Connect IQ.
 
-Języki: angielski, polski.
+Języki: angielski, polski, niemiecki, francuski, hiszpański.
 
 UPRAWNIENIA
 - Historia czujników: odczyt Body Battery i stresu do pól danych.
 - Komplikacje: otwieranie widżetu po przytrzymaniu odczytu.
 
 Żadne dane nie opuszczają zegarka.
+
+CO NOWEGO (1.2)
+- Orbita: gwiazdy w tle
+- Celowanie: przewijane liczniki, linie paneli na dnie i ścianach oraz klamry, które zbliżają się do celownika wraz z postępem kroków
+- Nowe opcje: Pochylone cyfry i Poświata CRT
+- Nowe pola danych: najbliższy wschód lub zachód słońca, tygodniowe minuty intensywne, wysokość
+- Bateria zmienia kolor na akcentowy przy 15% lub mniej
+- Języki: niemiecki, francuski i hiszpański
+- Zegar 12-godzinny: bez zera na początku, z małym A lub P
+- Piętra pokazują -- na zegarkach bez barometru
+- Mniej pracy w tle w trybie always-on
 
 CO NOWEGO (1.1)
 Sekundy: wybierz Sekundy w dowolnym polu danych albo włącz Pokaż sekundy, by widzieć je obok godziny. Sekundy są widoczne, gdy ekran jest włączony; widok always-on pozostaje minimalistyczny.

@@ -16,6 +16,9 @@ const FIELD_NOTIFICATIONS = 7;
 const FIELD_STEPS = 8;
 const FIELD_NONE = 9;
 const FIELD_SECONDS = 10;
+const FIELD_SUN = 11;            // next sunrise or sunset
+const FIELD_INTENSITY = 12;      // weekly intensity minutes
+const FIELD_ALTITUDE = 13;
 
 // Tap target for the weather readout (not a selectable field).
 const TARGET_WEATHER = 100;
@@ -29,7 +32,8 @@ function fieldNames() as Array<String> {
     return [$.str(Rez.Strings.FieldHr), $.str(Rez.Strings.FieldBattery), $.str(Rez.Strings.FieldBody),
             $.str(Rez.Strings.FieldStress), $.str(Rez.Strings.FieldCalories), $.str(Rez.Strings.FieldDistance),
             $.str(Rez.Strings.FieldFloors), $.str(Rez.Strings.FieldNotifications), $.str(Rez.Strings.FieldSteps),
-            $.str(Rez.Strings.FieldNone), $.str(Rez.Strings.FieldSeconds)];
+            $.str(Rez.Strings.FieldNone), $.str(Rez.Strings.FieldSeconds), $.str(Rez.Strings.FieldSunEvent),
+            $.str(Rez.Strings.FieldIntensity), $.str(Rez.Strings.FieldAltitude)];
 }
 
 function styleNames() as Array<String> {
@@ -79,6 +83,12 @@ function complicationFor(target as Number) {
         return Complications.COMPLICATION_TYPE_NOTIFICATION_COUNT;
     } else if (target == $.FIELD_STEPS) {
         return Complications.COMPLICATION_TYPE_STEPS;
+    } else if (target == $.FIELD_SUN) {
+        return Complications.COMPLICATION_TYPE_SUNRISE;
+    } else if (target == $.FIELD_INTENSITY) {
+        return Complications.COMPLICATION_TYPE_INTENSITY_MINUTES;
+    } else if (target == $.FIELD_ALTITUDE) {
+        return Complications.COMPLICATION_TYPE_ALTITUDE;
     } else if (target == $.TARGET_WEATHER) {
         return Complications.COMPLICATION_TYPE_CURRENT_WEATHER;
     }

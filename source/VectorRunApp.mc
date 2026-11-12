@@ -26,13 +26,23 @@ class VectorRunApp extends Application.AppBase {
 
     // Called when settings change from the phone (store installs).
     function onSettingsChanged() as Void {
+        $.settingsDirty = true;
         WatchUi.requestUpdate();
     }
 }
 
+// Set whenever a setting changes; the view re-reads its settings on the
+// next update and clears it.
+var settingsDirty as Boolean = true;
+
 // "Show seconds" setting (off by default).
 function showSeconds() as Boolean {
-    return Application.Properties.getValue("ShowSeconds") == true;
+    return $.getBool("ShowSeconds");
+}
+
+// Reads an on/off setting.
+function getBool(key as String) as Boolean {
+    return Application.Properties.getValue(key) == true;
 }
 
 // Reads a numeric setting, falling back to a default.

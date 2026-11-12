@@ -1,6 +1,5 @@
 # Build output
 bin/
-out/
 *.prg
 *.prg.debug.xml
 *.iq

@@ -37,6 +37,17 @@ class VectorRunView extends WatchUi.WatchFace {
     private var _cy as Number = 227;
     private var _k as Float = 1.0;        // scale relative to 454 px design
 
+    // settings, read once and again whenever $.settingsDirty is set
+    private var _style as Number = 0;
+    private var _f1 as Number = 0;
+    private var _f2 as Number = 1;
+    private var _f3 as Number = 8;
+    private var _showSec as Boolean = false;
+    private var _crt as Boolean = false;      // CRT glow + scanlines option
+    private var _slant as Number = 0;         // digit slant in percent (0 or 13)
+    // orbit starfield: x, y, brightness level (454 px design units)
+    private var _stars as Array<Number> = [] as Array<Number>;
+
     // colours (set from settings in applyTheme)
     private var _main as Number = 0x33FF66;
     private var _dim as Number = 0x0E5522;
@@ -56,6 +67,9 @@ class VectorRunView extends WatchUi.WatchFace {
     private var _cond as Number? = null;      // Weather.CONDITION_* value
     private var _dayFactor as Float = 1.0;    // 0 = night, 1 = solar noon
     private var _moonPhase as Float = 0.0;    // 0 = new, 0.5 = full
+    private var _sunNext as Number? = null;   // next sunrise / sunset (epoch s), null = no location
+    private var _sunIsRise as Boolean = true;
+    private var _altitude as Number? = null;  // in the watch's elevation units
     private var _orbitStacked as Boolean = false;   // orbit fields 1/2 on separate lines
     private var _rowY as Array<Number> = [0, 0, 0] as Array<Number>;   // orbit field rows (screen px)
     private var _rowH as Number = 31;
@@ -70,7 +84,19 @@ class VectorRunView extends WatchUi.WatchFace {
         WatchFace.initialize();
         // bits: a=1 top, b=2 top-right, c=4 bottom-right, d=8 bottom,
         //       e=16 bottom-left, f=32 top-left, g=64 middle
-        _seg = [0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F];
+        // 10 and 11 are the letters A and P (12-hour marker)
+        _seg = [0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F, 0x77, 0x73];
+        $.settingsDirty = true;
+        _stars = [
+            338, 49, 1, 309, 44, 0, 332, 261, 4, 271, 243, 2, 257, 246, 3, 329, 225, 1,
+            293, 162, 2, 194, 222, 3, 371, 257, 1, 248, 164, 1, 169, 58, 2, 232, 179, 0,
+            422, 167, 1, 187, 122, 1, 230, 191, 1, 217, 220, 1, 426, 301, 1, 333, 45, 3,
+            314, 242, 2, 223, 163, 0, 433, 218, 0, 196, 29, 2, 176, 370, 0, 307, 228, 2,
+            215, 234, 0, 325, 162, 2, 378, 157, 2, 264, 186, 2, 196, 431, 4, 340, 165, 0,
+            211, 227, 1, 225, 193, 4, 410, 294, 2, 295, 240, 0, 403, 341, 0, 199, 216, 2,
+            303, 219, 2, 162, 60, 0, 296, 232, 1, 279, 192, 1, 194, 316, 0, 177, 386, 3,
+            196, 198, 1, 272, 167, 4, 277, 27, 2, 182, 400, 3
+        ];
         loadText();
         _bands = [
             372, 324, 340,  372, 346, 10,   372, 16, 34,
@@ -94,17 +120,21 @@ class VectorRunView extends WatchUi.WatchFace {
         if (dc has :setAntiAlias) {
             dc.setAntiAlias(true);
         }
-        applyTheme();
-        var clock = System.getClockTime();
-        if (clock.min != _cacheMin) {
-            refreshSlowData();
-            _cacheMin = clock.min;
+        if ($.settingsDirty) {
+            loadSettings();
+            $.settingsDirty = false;
         }
-        var style = $.getProp("Style", 0);
+        var clock = System.getClockTime();
+        var style = _style;
 
+        // the always-on view shows none of the slow data, so skip reading it
         if (!_awake) {
             drawAlwaysOn(dc, clock, style);
             return;
+        }
+        if (clock.min != _cacheMin) {
+            refreshSlowData();
+            _cacheMin = clock.min;
         }
 
         var data = readData();
@@ -113,42 +143,31 @@ class VectorRunView extends WatchUi.WatchFace {
         } else {
             drawStepBezel(dc, data[:progress] as Float);
             drawDate(dc, _cx, s(40));
-            drawTime(dc, clock, _cx, s(64), s(30), s(52), s(5), $.showSeconds());
+            drawTime(dc, clock, _cx, s(64), s(30), s(52), s(5), _showSec);
             if (style == 2) {
                 drawRadar(dc, clock, data);
             } else {
                 drawTargeting(dc, clock, data);
             }
         }
-        drawTapDebug(dc);
-    }
-
-    // ------------------------------------------------------- tap debugging
-
-    private var _tapMsg as String? = null;
-    private var _tapTime as Number = 0;
-
-    // Called by VectorRunDelegate when TAP_DEBUG is on.
-    function reportTap(msg as String) as Void {
-        _tapMsg = msg;
-        _tapTime = System.getTimer();
-        WatchUi.requestUpdate();
-    }
-
-    private function drawTapDebug(dc as Dc) as Void {
-        var msg = _tapMsg;
-        if (msg == null || System.getTimer() - _tapTime > 4000) {
-            return;
+        if (_crt) {
+            drawScanlines(dc);
         }
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-        dc.fillRectangle(s(90), s(410), s(274), s(28));
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(_cx, s(424), Graphics.FONT_XTINY, msg,
-            Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+
+    // CRT option: a black line across every fourth row.
+    private function drawScanlines(dc as Dc) as Void {
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.setPenWidth(1);
+        var h = _cy * 2;
+        for (var y = 3; y < h; y += 4) {
+            dc.drawLine(0, y, _w, y);
+        }
     }
 
     function onExitSleep() as Void {
         _awake = true;
+        _cacheMin = -1;         // re-read weather, Body Battery etc. on wake
         WatchUi.requestUpdate();
     }
 
@@ -165,10 +184,10 @@ class VectorRunView extends WatchUi.WatchFace {
     function hitTest(x as Number, y as Number) as Number? {
         var px = x / _k;
         var py = y / _k;
-        var style = $.getProp("Style", 0);
-        var f1 = $.getProp("Field1", $.settingDefault("Field1"));
-        var f2 = $.getProp("Field2", $.settingDefault("Field2"));
-        var f3 = $.getProp("Field3", $.settingDefault("Field3"));
+        var style = _style;
+        var f1 = _f1;
+        var f2 = _f2;
+        var f3 = _f3;
 
         if (style == 0) {
             if (_temp != null && inBox(px, py, 330, 118, 425, 154)) { return $.TARGET_WEATHER; }
@@ -187,8 +206,8 @@ class VectorRunView extends WatchUi.WatchFace {
             return null;
         }
         var fy = (style == 2) ? 261 : 229;
-        var fx = (style == 2) ? (_radarBottomX[0] / _k).toNumber() : 102;
-        var wx = (style == 2) ? (_radarBottomX[1] / _k).toNumber() : 352;
+        var fx = (style == 2) ? (_radarBottomX[0] / _k).toNumber() : 110;
+        var wx = (style == 2) ? (_radarBottomX[1] / _k).toNumber() : 344;
         if (inBox(px, py, 0, fy - 45, 112, fy + 45)) { return f1; }
         if (inBox(px, py, 342, fy - 45, 454, fy + 45)) { return f2; }
         if (inBox(px, py, fx - 40, 318, fx + 40, 378)) { return f3; }
@@ -217,7 +236,7 @@ class VectorRunView extends WatchUi.WatchFace {
         var goal = 0;
         var calories = 0;
         var distance = 0;
-        var floors = 0;
+        var floors = null;      // stays null on watches without a barometer
         var am = ActivityMonitor.getInfo();
         var v = am.steps;
         if (v != null) { steps = v; }
@@ -228,8 +247,14 @@ class VectorRunView extends WatchUi.WatchFace {
         v = am.distance;
         if (v != null) { distance = v; }
         if (am has :floorsClimbed) {
-            v = am.floorsClimbed;
-            if (v != null) { floors = v; }
+            floors = am.floorsClimbed;
+        }
+        var intensity = null;
+        if (am has :activeMinutesWeek) {
+            var amw = am.activeMinutesWeek;
+            if (amw != null) {
+                intensity = amw.total;
+            }
         }
         var progress = 0.0;
         if (goal > 0) {
@@ -258,6 +283,7 @@ class VectorRunView extends WatchUi.WatchFace {
             :calories => calories,
             :distance => distance,
             :floors => floors,
+            :intensity => intensity,
             :hr => hr,
             :battery => System.getSystemStats().battery.toNumber(),
             :notifs => System.getDeviceSettings().notificationCount
@@ -306,6 +332,8 @@ class VectorRunView extends WatchUi.WatchFace {
         var midnight = Time.today().value();
         var sunrise = midnight + 6 * 3600;
         var sunset = midnight + 18 * 3600;
+        var haveSun = false;
+        var nextRise = sunrise + 86400;
         if (loc != null && (Weather has :getSunrise) && (Weather has :getSunset)) {
             var m = Time.now();
             var a = Weather.getSunrise(loc, m);
@@ -313,6 +341,23 @@ class VectorRunView extends WatchUi.WatchFace {
             if (a != null && b != null) {
                 sunrise = a.value();
                 sunset = b.value();
+                haveSun = true;
+                var c = Weather.getSunrise(loc, m.add(new Time.Duration(86400)));
+                nextRise = (c != null) ? c.value() : sunrise + 86400;
+            }
+        }
+        // next sun event for the sunrise/sunset field
+        _sunNext = null;
+        if (haveSun) {
+            if (now < sunrise) {
+                _sunNext = sunrise;
+                _sunIsRise = true;
+            } else if (now < sunset) {
+                _sunNext = sunset;
+                _sunIsRise = false;
+            } else {
+                _sunNext = nextRise;
+                _sunIsRise = true;
             }
         }
         _dayFactor = 0.0;
@@ -320,9 +365,41 @@ class VectorRunView extends WatchUi.WatchFace {
             _dayFactor = Math.sin(Math.PI * (now - sunrise) / (sunset - sunrise)).toFloat();
         }
 
+        // Altitude: live reading if there is one, else the last history sample.
+        _altitude = null;
+        var alt = null;
+        var ai = Activity.getActivityInfo();
+        if (ai != null) {
+            alt = ai.altitude;
+        }
+        if (alt == null && (Toybox has :SensorHistory) && (SensorHistory has :getElevationHistory)) {
+            var el = SensorHistory.getElevationHistory({:period => 1}).next();
+            if (el != null && el.data != null) {
+                alt = el.data;
+            }
+        }
+        if (alt != null) {
+            var af = (alt as Numeric).toFloat();
+            if (System.getDeviceSettings().elevationUnits != System.UNIT_METRIC) {
+                af = af * 3.28084;
+            }
+            _altitude = Math.round(af).toNumber();
+        }
+
         // Moon phase from a known new moon (2000-01-06 18:14 UTC).
         var cycles = (now - 947182440) / 86400.0 / 29.530588853;
         _moonPhase = (cycles - Math.floor(cycles)).toFloat();
+    }
+
+    private function loadSettings() as Void {
+        _style = $.getProp("Style", 0);
+        _f1 = $.getProp("Field1", $.settingDefault("Field1"));
+        _f2 = $.getProp("Field2", $.settingDefault("Field2"));
+        _f3 = $.getProp("Field3", $.settingDefault("Field3"));
+        _showSec = $.showSeconds();
+        _crt = $.getBool("CrtGlow");
+        _slant = $.getBool("SlantDigits") ? 13 : 0;
+        applyTheme();
     }
 
     // Colours come from the palette; dim lines and planet shading are derived.
@@ -349,16 +426,27 @@ class VectorRunView extends WatchUi.WatchFace {
         var hr = $.str(Rez.Strings.LblHr);
         var kcal = $.str(Rez.Strings.LblKcal);
         var steps = $.str(Rez.Strings.LblSteps);
+        var longSteps = $.str(Rez.Strings.LongSteps);
         var sec = $.str(Rez.Strings.LblSec);
-        // indexed by FIELD_* (distance is handled separately for km / mi)
+        // indexed by FIELD_* (distance, sunrise/sunset and altitude have
+        // changing labels and are handled in fieldLabel)
         _lblShort = [hr, $.str(Rez.Strings.LblBat), $.str(Rez.Strings.LblBody), $.str(Rez.Strings.LblStress),
-                     kcal, "", $.str(Rez.Strings.LblFloors), $.str(Rez.Strings.LblMsgs), steps, "", sec];
+                     kcal, "", $.str(Rez.Strings.LblFloors), $.str(Rez.Strings.LblMsgs), steps, "", sec,
+                     "", $.str(Rez.Strings.LblInt), ""];
         _lblLong = [hr, $.str(Rez.Strings.LongBat), $.str(Rez.Strings.LongBody), $.str(Rez.Strings.LongStress),
-                    kcal, "", $.str(Rez.Strings.LongFloors), $.str(Rez.Strings.LongMsgs), steps, "", sec];
+                    kcal, "", $.str(Rez.Strings.LongFloors), $.str(Rez.Strings.LongMsgs), longSteps, "", sec,
+                    "", $.str(Rez.Strings.LongInt), ""];
         _txt = {
             :batPct => $.str(Rez.Strings.LblBatPct),
             :km => $.str(Rez.Strings.LblKm),
             :mi => $.str(Rez.Strings.LblMi),
+            :rise => $.str(Rez.Strings.LblRise),
+            :set => $.str(Rez.Strings.LblSet),
+            :longRise => $.str(Rez.Strings.LongRise),
+            :longSet => $.str(Rez.Strings.LongSet),
+            :alt => $.str(Rez.Strings.LblAlt),
+            :m => $.str(Rez.Strings.LblM),
+            :ft => $.str(Rez.Strings.LblFt),
             :f3 => $.str(Rez.Strings.Field3Pattern),
             :inRange => $.str(Rez.Strings.InRange),
             :now => $.str(Rez.Strings.Now),
@@ -396,13 +484,23 @@ class VectorRunView extends WatchUi.WatchFace {
         if (type == $.FIELD_DISTANCE) {
             return isMetric() ? txt(:km) : txt(:mi);
         }
+        if (type == $.FIELD_SUN) {
+            return _sunIsRise ? txt(:rise) : txt(:set);
+        }
+        if (type == $.FIELD_ALTITUDE) {
+            var metricElev = System.getDeviceSettings().elevationUnits == System.UNIT_METRIC;
+            return txt(:alt) + " " + (metricElev ? txt(:m) : txt(:ft));
+        }
         return (type >= 0 && type < _lblShort.size()) ? _lblShort[type] : "";
     }
 
     // Longer label for the single-field line in the orbit style.
     private function fieldLongLabel(type as Number) as String {
-        if (type == $.FIELD_DISTANCE) {
+        if (type == $.FIELD_DISTANCE || type == $.FIELD_ALTITUDE) {
             return fieldLabel(type);
+        }
+        if (type == $.FIELD_SUN) {
+            return _sunIsRise ? txt(:longRise) : txt(:longSet);
         }
         return (type >= 0 && type < _lblLong.size()) ? _lblLong[type] : "";
     }
@@ -423,11 +521,37 @@ class VectorRunView extends WatchUi.WatchFace {
             var cm = data[:distance] as Number;
             return (cm / (isMetric() ? 100000.0 : 160934.4)).format("%.1f");
         }
-        if (type == $.FIELD_FLOORS) { return (data[:floors] as Number).format("%d"); }
+        if (type == $.FIELD_FLOORS) { return numOrDash(data[:floors] as Number?); }
         if (type == $.FIELD_NOTIFICATIONS) { return (data[:notifs] as Number).format("%d"); }
         if (type == $.FIELD_STEPS) { return (data[:steps] as Number).format("%d"); }
         if (type == $.FIELD_SECONDS) { return System.getClockTime().sec.format("%02d"); }
+        if (type == $.FIELD_SUN) { return sunText(); }
+        if (type == $.FIELD_INTENSITY) { return numOrDash(data[:intensity] as Number?); }
+        if (type == $.FIELD_ALTITUDE) { return numOrDash(_altitude); }
         return "";
+    }
+
+    // Time of the next sunrise or sunset ("18:42"), or "--" without a location.
+    private function sunText() as String {
+        var at = _sunNext;
+        if (at == null) {
+            return "--";
+        }
+        var info = Gregorian.info(new Time.Moment(at), Time.FORMAT_SHORT);
+        var h = info.hour;
+        if (System.getDeviceSettings().is24Hour) {
+            return h.format("%02d") + ":" + info.min.format("%02d");
+        }
+        h = h % 12;
+        if (h == 0) {
+            h = 12;
+        }
+        return h.format("%d") + ":" + info.min.format("%02d");
+    }
+
+    // Battery turns to the accent colour at 15% or below.
+    private function fieldColor(type as Number, data as Dictionary) as Number {
+        return (type == $.FIELD_BATTERY && (data[:battery] as Number) <= 15) ? _accent : _main;
     }
 
     private function numOrDash(v as Number?) as String {
@@ -446,10 +570,10 @@ class VectorRunView extends WatchUi.WatchFace {
             gap = s(30);
         }
         var up = gap * 8 / 15;
-        dc.setColor(_main, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(fieldColor(type, data), Graphics.COLOR_TRANSPARENT);
         dc.drawText(x, y - up, Graphics.FONT_XTINY, type == $.FIELD_BATTERY ? txt(:batPct) : fieldLabel(type),
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(x, y - up + gap, Graphics.FONT_TINY, fieldValue(type, data, false),
+        dc.drawText(x, y - up + gap, Graphics.FONT_TINY, fieldValue(type, data, stackPct(type, data)),
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
@@ -459,8 +583,16 @@ class VectorRunView extends WatchUi.WatchFace {
             return 0;
         }
         var a = dc.getTextWidthInPixels(type == $.FIELD_BATTERY ? txt(:batPct) : fieldLabel(type), Graphics.FONT_XTINY);
-        var b = dc.getTextWidthInPixels(fieldValue(type, data, false), Graphics.FONT_TINY);
+        var b = dc.getTextWidthInPixels(fieldValue(type, data, stackPct(type, data)), Graphics.FONT_TINY);
         return a > b ? a : b;
+    }
+
+    // In a side readout the battery's "%" is normally part of the label
+    // (BAT%). Where a translation's label has no "%" (German AKKU), it goes
+    // after the number instead - except at 100, which is as wide as the
+    // spot allows without the sign.
+    private function stackPct(type as Number, data as Dictionary) as Boolean {
+        return type == $.FIELD_BATTERY && txt(:batPct).find("%") == null && (data[:battery] as Number) < 100;
     }
 
     // Free width between the screen edge and `inner` for a side readout.
@@ -522,40 +654,68 @@ class VectorRunView extends WatchUi.WatchFace {
 
     // HH:MM in seven-segment digits, centred on x, top edge at y. With
     // withSec, HH:MM shrinks a little and small seconds follow it, sharing
-    // its bottom edge, so nothing below the time moves.
+    // its bottom edge, so nothing below the time moves. In 12-hour mode the
+    // leading zero is dropped and a small A or P follows.
     private function drawTime(dc as Dc, clock as System.ClockTime, x as Number, y as Number,
                               dw as Number, dh as Number, pen as Number, withSec as Boolean) as Void {
+        if (_crt && _awake) {
+            // glow: the same digits first, a little wider and dim
+            drawTimePass(dc, clock, x, y, dw, dh, pen, withSec, s(3), $.shade(_main, 0.2));
+        }
+        drawTimePass(dc, clock, x, y, dw, dh, pen, withSec, 0, _main);
+    }
+
+    // extra = added stroke width (glow pass), col = stroke colour.
+    private function drawTimePass(dc as Dc, clock as System.ClockTime, x as Number, y as Number,
+                                  dw as Number, dh as Number, pen as Number, withSec as Boolean,
+                                  extra as Number, col as Number) as Void {
+        var is24 = System.getDeviceSettings().is24Hour;
         var hour = clock.hour;
-        if (!System.getDeviceSettings().is24Hour) {
+        var pm = hour >= 12;
+        if (!is24) {
             hour = hour % 12;
             if (hour == 0) {
                 hour = 12;
             }
         }
-        var sw = 0;
-        var sh = 0;
-        var sGap = 0;
-        var sPen = pen;
-        var sLead = 0;
+        var blankLead = !is24 && hour < 10;
         if (withSec) {
             var dh2 = dh * 9 / 10;
             y += dh - dh2;
             dh = dh2;
             dw = dw * 4 / 5;
-            sw = dw * 2 / 3;
-            sh = dh * 3 / 5;
-            sGap = sw / 2 > s(5) ? sw / 2 : s(5);
-            sPen = pen * 4 / 5 > 2 ? pen * 4 / 5 : 2;
-            sLead = s(12);
+        }
+        // small glyphs after HH:MM: seconds, then A / P
+        var sw = dw * 2 / 3;
+        var sh = dh * 3 / 5;
+        var sGap = sw / 2 > s(5) ? sw / 2 : s(5);
+        var sLead = s(12);
+        // gap before the A / P marker: wide enough that it does not read as
+        // part of a "1" beside it
+        var apGap = withSec ? sGap + s(12) : s(20);
+        var sPen = pen * 4 / 5;
+        if (sPen < 2) {
+            sPen = pen < 2 ? pen : 2;
         }
         var gap = dw / 2;
-        var hmW = dw * 4 + gap * 4;
-        var px = x - (withSec ? hmW + sLead + sw * 2 + sGap : hmW) / 2;
+        var total = dw * 4 + gap * 4;
+        if (blankLead) {
+            total -= dw + gap;
+        }
+        if (withSec) {
+            total += sLead + sw * 2 + sGap;
+        }
+        if (!is24) {
+            total += apGap + sw;
+        }
+        var px = x - total / 2;
 
-        dc.setPenWidth(pen);
-        dc.setColor(_main, Graphics.COLOR_TRANSPARENT);
-        drawDigit(dc, px, y, dw, dh, hour / 10, pen);
-        px += dw + gap;
+        dc.setPenWidth(pen + extra);
+        dc.setColor(col, Graphics.COLOR_TRANSPARENT);
+        if (!blankLead) {
+            drawDigit(dc, px, y, dw, dh, hour / 10, pen);
+            px += dw + gap;
+        }
         drawDigit(dc, px, y, dw, dh, hour % 10, pen);
         px += dw + gap;
         dc.fillRectangle(px - pen / 2 - 1, y + dh * 3 / 10 - pen / 2, pen + 1, pen + 1);
@@ -564,27 +724,55 @@ class VectorRunView extends WatchUi.WatchFace {
         drawDigit(dc, px, y, dw, dh, clock.min / 10, pen);
         px += dw + gap;
         drawDigit(dc, px, y, dw, dh, clock.min % 10, pen);
+        px += dw;
+
+        var sy = y + dh - sh;
+        dc.setPenWidth(sPen + extra);
         if (withSec) {
-            px += dw + sLead;
-            dc.setPenWidth(sPen);
-            drawDigit(dc, px, y + dh - sh, sw, sh, clock.sec / 10, sPen);
-            drawDigit(dc, px + sw + sGap, y + dh - sh, sw, sh, clock.sec % 10, sPen);
+            px += sLead;
+            drawDigit(dc, px, sy, sw, sh, clock.sec / 10, sPen);
+            px += sw + sGap;
+            drawDigit(dc, px, sy, sw, sh, clock.sec % 10, sPen);
+            px += sw;
+        }
+        if (!is24) {
+            px += apGap;
+            drawDigit(dc, px, sy, sw, sh, pm ? 11 : 10, sPen);
         }
     }
 
-    // One seven-segment digit; uses the current colour and pen width.
+    // One seven-segment glyph (0-9, 10 = A, 11 = P); uses the current colour
+    // and pen width. `pen` is only the gap left at the segment ends. With the
+    // slanted-digits option the top leans right and the bottom left.
     private function drawDigit(dc as Dc, x as Number, y as Number, w as Number, h as Number,
                                d as Number, pen as Number) as Void {
         var m = _seg[d];
         var g = pen;
         var hh = h / 2;
-        if ((m & 0x01) != 0) { dc.drawLine(x + g, y, x + w - g, y); }
-        if ((m & 0x02) != 0) { dc.drawLine(x + w, y + g, x + w, y + hh - g); }
-        if ((m & 0x04) != 0) { dc.drawLine(x + w, y + hh + g, x + w, y + h - g); }
-        if ((m & 0x08) != 0) { dc.drawLine(x + g, y + h, x + w - g, y + h); }
-        if ((m & 0x10) != 0) { dc.drawLine(x, y + hh + g, x, y + h - g); }
-        if ((m & 0x20) != 0) { dc.drawLine(x, y + g, x, y + hh - g); }
+        var o = hh * _slant / 100;              // sideways shift at the top edge
+        var og = (hh - g) * _slant / 100;       // ... and at a segment end near it
+        var oc = g * _slant / 100;              // ... and at a segment end near the middle
+        if ((m & 0x01) != 0) { dc.drawLine(x + g + o, y, x + w - g + o, y); }
+        if ((m & 0x02) != 0) { dc.drawLine(x + w + og, y + g, x + w + oc, y + hh - g); }
+        if ((m & 0x04) != 0) { dc.drawLine(x + w - oc, y + hh + g, x + w - og, y + h - g); }
+        if ((m & 0x08) != 0) { dc.drawLine(x + g - o, y + h, x + w - g - o, y + h); }
+        if ((m & 0x10) != 0) { dc.drawLine(x - oc, y + hh + g, x - og, y + h - g); }
+        if ((m & 0x20) != 0) { dc.drawLine(x + og, y + g, x + oc, y + hh - g); }
         if ((m & 0x40) != 0) { dc.drawLine(x + g, y + hh, x + w - g, y + hh); }
+    }
+
+    // Tiny seven-segment number with leading zeros (decorative counters).
+    private function drawTinyNumber(dc as Dc, x as Number, y as Number, value as Number, digits as Number) as Void {
+        var w = s(7);
+        var h = s(11);
+        var step = w + s(4);
+        dc.setPenWidth(s(2));
+        var px = x + step * (digits - 1);
+        for (var i = 0; i < digits; i++) {
+            drawDigit(dc, px, y, w, h, value % 10, 0);
+            value /= 10;
+            px -= step;
+        }
     }
 
     // ------------------------------------------------------------ weather
@@ -678,6 +866,26 @@ class VectorRunView extends WatchUi.WatchFace {
 
     // Field 3 in the lower corner (targeting and radar).
     // Width of a field-3 readout (label or value, both small font).
+    // Centre x of the Targeting bottom-left field: its usual spot, moved
+    // right when a wide value (a five-digit step count) would reach the
+    // bezel ticks.
+    private function targetField3X(dc as Dc, type as Number, data as Dictionary) as Number {
+        var x = s(110);
+        if (type == $.FIELD_NONE) {
+            return x;
+        }
+        var half = dc.getTextWidthInPixels(fieldValue(type, data, true), Graphics.FONT_XTINY) / 2;
+        var dy = s(354) + s(14) + dc.getFontHeight(Graphics.FONT_XTINY) * 35 / 100 - _cy;   // value's lower edge
+        var r = _cx - s(22);                                                                // inside the ticks
+        if (dy < r) {
+            var minX = _cx - Math.sqrt(r * r - dy * dy).toNumber() + s(4) + half;
+            if (x < minX) {
+                x = minX;
+            }
+        }
+        return x;
+    }
+
     private function smallWidth(dc as Dc, type as Number, data as Dictionary) as Number {
         if (type == $.FIELD_NONE) {
             return 0;
@@ -691,7 +899,7 @@ class VectorRunView extends WatchUi.WatchFace {
         if (type == $.FIELD_NONE) {
             return;
         }
-        dc.setColor(_main, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(fieldColor(type, data), Graphics.COLOR_TRANSPARENT);
         dc.drawText(x, y - s(12), Graphics.FONT_XTINY, fieldLabel(type),
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(x, y + s(14), Graphics.FONT_XTINY, fieldValue(type, data, true),
@@ -724,23 +932,18 @@ class VectorRunView extends WatchUi.WatchFace {
         var ex = moonX(1.0);          // range marker: moon fully clear of the planet
         var ey = _cy;
 
-        // "+" field; one column lights up per second like a scan. Rows end
-        // at y 244 so taller translated text (W ZASIĘGU) has room below.
-        var scan = clock.sec % 6;
-        var lim = s(200) * s(200);
-        dc.setPenWidth(s(2));
-        for (var c = 0; c < 6; c++) {
-            var gx = s(252 + c * 32);
-            for (var r = 0; r < 4; r++) {
-                var gy = s(166 + r * 26);
-                var dx = gx - _cx;
-                var dy = gy - _cy;
-                if (dx * dx + dy * dy < lim) {
-                    dc.setColor(c == scan ? _main : _dim, Graphics.COLOR_TRANSPARENT);
-                    dc.drawLine(gx - s(5), gy, gx + s(5), gy);
-                    dc.drawLine(gx, gy - s(5), gx, gy + s(5));
-                }
+        // starfield: fixed stars in the empty black; a few twinkle each second
+        var starCols = [$.shade(_main, 0.3), $.shade(_main, 0.45), $.shade(_main, 0.7),
+                        $.shade(_main, 0.6), $.shade(_main, 0.9)];
+        for (var si = 0; si + 2 < _stars.size(); si += 3) {
+            var lv = _stars[si + 2];
+            var big = lv >= 3;
+            if ((si / 3 + clock.sec) % 7 == 0 && lv != 2 && lv != 4) {
+                lv += 1;                          // twinkle: one step brighter
             }
+            dc.setColor(starCols[lv] as Number, Graphics.COLOR_TRANSPARENT);
+            var sz = big ? s(3) : s(2);
+            dc.fillRectangle(s(_stars[si]), s(_stars[si + 1]), sz, sz);
         }
 
         // planet: night side inside the terminator radius, lit crescent outside
@@ -768,6 +971,11 @@ class VectorRunView extends WatchUi.WatchFace {
             dc.drawArc(px, py, rT, Graphics.ARC_COUNTER_CLOCKWISE, a0, (a0 + 3) % 360);
         }
 
+        if (_crt) {
+            dc.setColor($.shade(_planetRim, 0.3), Graphics.COLOR_TRANSPARENT);
+            dc.setPenWidth(s(11));
+            dc.drawCircle(px, py, pr);
+        }
         dc.setColor(_planetRim, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(s(4));
         dc.drawCircle(px, py, pr);
@@ -827,7 +1035,7 @@ class VectorRunView extends WatchUi.WatchFace {
         }
 
         // time, date and weather
-        drawTime(dc, clock, s(290), s(64), s(26), s(48), s(5), $.showSeconds());
+        drawTime(dc, clock, s(290), s(64), s(26), s(48), s(5), _showSec);
         if (_temp != null && _cond != null) {
             drawDate(dc, s(280), s(136));
             drawWeatherIcon(dc, s(354), s(136), s(11), _cond as Number);
@@ -850,9 +1058,9 @@ class VectorRunView extends WatchUi.WatchFace {
         var gapXT = ((hX + hT) * 0.4).toNumber();      // ~80% of the half-heights
         var line = s(31) > (hX * 0.85).toNumber() ? s(31) : (hX * 0.85).toNumber();
 
-        var f1 = $.getProp("Field1", $.settingDefault("Field1"));
-        var f2 = $.getProp("Field2", $.settingDefault("Field2"));
-        var f3 = $.getProp("Field3", $.settingDefault("Field3"));
+        var f1 = _f1;
+        var f2 = _f2;
+        var f3 = _f3;
         var t1 = inlineField(f1, data);
         var t2 = inlineField(f2, data);
         var joined = t1 + ((t1.length() > 0 && t2.length() > 0) ? " " : "") + t2;
@@ -867,6 +1075,7 @@ class VectorRunView extends WatchUi.WatchFace {
         }
         var yLast = y1 + line * (rows - 1);
         var limit = _cy * 2 - s(30) - (hX * 0.4).toNumber();
+
         var lift = yLast - limit;
         var maxLift = yIR - (s(250) + (hX * 0.45).toNumber());   // keep clear of the grid
         if (lift > maxLift) {
@@ -880,28 +1089,76 @@ class VectorRunView extends WatchUi.WatchFace {
         _rowY = [y1, y1 + line, y1 + line * 2];
         _rowH = line;
 
+        // "+" field; one column lights up per second like a scan. Rows end
+        // at y 244 so taller translated text (W ZASIĘGU) has room below.
+        var scan = clock.sec % 6;
+        var lim = s(200) * s(200);
+        dc.setPenWidth(s(2));
+        for (var c = 0; c < 6; c++) {
+            var gx = s(252 + c * 32);
+            for (var r = 0; r < 4; r++) {
+                var gy = s(166 + r * 26);
+                var dx = gx - _cx;
+                var dy = gy - _cy;
+                if (dx * dx + dy * dy < lim) {
+                    dc.setColor(c == scan ? _main : _dim, Graphics.COLOR_TRANSPARENT);
+                    dc.drawLine(gx - s(5), gy, gx + s(5), gy);
+                    dc.drawLine(gx, gy - s(5), gx, gy + s(5));
+                }
+            }
+        }
+
         // countdown
         var minsLeft = 60 - clock.min;
+        var minText = locked ? txt(:now) : Lang.format(txt(:min), [minsLeft]);
         dc.setColor(_main, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(s(290), yIR, font, txt(:inRange), just);
+        // a long caption (IN REICHWEITE) is nudged right so it keeps a clear
+        // gap to the planet's edge
+        var irX = s(290);
+        var irDy = yIR - _cy;
+        var irMin = (_cx - s($.PLANET_OFFSET)) + Math.sqrt(pr * pr - irDy * irDy).toNumber() + s(18)
+                    + dc.getTextWidthInPixels(txt(:inRange), font) / 2;
+        if (irX < irMin) {
+            irX = irMin;
+        }
+        dc.drawText(irX, yIR, font, txt(:inRange), just);
         dc.setColor(locked || minsLeft <= 5 ? _accent : _main, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(s(290), yMin, Graphics.FONT_TINY, locked ? txt(:now) : Lang.format(txt(:min), [minsLeft]), just);
+        dc.drawText(s(290), yMin, Graphics.FONT_TINY, minText, just);
 
         // fields 1 and 2 share a line when it fits between the planet and the
         // screen edge; otherwise each gets its own line. Field 3 goes last.
-        dc.setColor(_main, Graphics.COLOR_TRANSPARENT);
+        var c1 = fieldColor(f1, data);
+        var c2 = fieldColor(f2, data);
         var y = y1 + line;
         if (_orbitStacked) {
-            dc.drawText(orbitTextX(dc, t1, font, s(292), y1), y1, font, t1, just);
-            dc.drawText(orbitTextX(dc, t2, font, s(285), y1 + line), y1 + line, font, t2, just);
+            var tx1 = orbitTextX(dc, t1, font, s(292), y1);
+            var tx2 = orbitTextX(dc, t2, font, s(285), y1 + line);
+            dc.setColor(c1, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(tx1, y1, font, t1, just);
+            dc.setColor(c2, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(tx2, y1 + line, font, t2, just);
             y = y1 + line * 2;
         } else {
-            dc.drawText(orbitTextX(dc, joined, font, s(305), y1), y1, font, joined, just);
+            var xj = orbitTextX(dc, joined, font, s(305), y1);
+            if (c1 == c2) {
+                dc.setColor(c1, Graphics.COLOR_TRANSPARENT);
+                dc.drawText(xj, y1, font, joined, just);
+            } else {
+                // two colours on one line: draw each half from its own end
+                var jw = dc.getTextWidthInPixels(joined, font);
+                var jx = xj - jw / 2;
+                dc.setColor(c1, Graphics.COLOR_TRANSPARENT);
+                dc.drawText(jx, y1, font, t1, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+                dc.setColor(c2, Graphics.COLOR_TRANSPARENT);
+                dc.drawText(jx + jw, y1, font, t2, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+            }
         }
         if (f3 != $.FIELD_NONE) {
             var v3 = fieldValue(f3, data, true);
             var t3 = Lang.format(txt(:f3), [v3, fieldLongLabel(f3)]);
-            dc.drawText(orbitTextX(dc, t3, font, _orbitStacked ? s(280) : s(292), y), y, font, t3, just);
+            var tx3 = orbitTextX(dc, t3, font, _orbitStacked ? s(280) : s(292), y);
+            dc.setColor(fieldColor(f3, data), Graphics.COLOR_TRANSPARENT);
+            dc.drawText(tx3, y, font, t3, just);
         }
     }
 
@@ -1003,14 +1260,45 @@ class VectorRunView extends WatchUi.WatchFace {
         var top = s(142);
         var bottom = s(318);
 
-        // trench cross-sections rushing toward you (one step per second)
+        if (_crt) {
+            // glow under the trench outline
+            dc.setPenWidth(s(8));
+            dc.setColor($.shade(_main, 0.25), Graphics.COLOR_TRANSPARENT);
+            drawTrenchRails(dc, vx, vy, left, top, right, bottom);
+            drawTrenchSection(dc, vx, vy, left, top, right, bottom, 1.0);
+        }
+
+        // trench cross-sections rushing toward you (one step per second),
+        // with short panel lines on the floor and walls between them. The
+        // panel pattern is keyed to the section, so it travels with it.
         var phase = (clock.sec % 4) / 4.0;
+        var cycle = (clock.min * 60 + clock.sec) / 4;
+        var floorU = [12, 46, 82,  22, 58, 90,  34, 70, 16,  28, 52, 76];   // % across the floor
+        var wallV = [20, 60,  40, 80,  30, 70,  20, 80];                    // % down the walls
+        var segA = [0.15, 0.30, 0.10];                                      // where each floor line starts ...
+        var segB = [0.70, 0.90, 0.60];                                      // ... and ends, between two sections
         dc.setPenWidth(s(2));
         dc.setColor(_dim, Graphics.COLOR_TRANSPARENT);
+        var ka = 1.0;
         for (var i = 0; i < 6; i++) {
             var z = i + 1.0 - phase;
             var f = 1.0 / (1.0 + z * 0.8);
             drawTrenchSection(dc, vx, vy, left, top, right, bottom, f);
+            var pat = (i + cycle) % 4;
+            for (var q = 0; q < 3; q++) {
+                var fx = left + (right - left) * (floorU[pat * 3 + q] as Number) / 100;
+                var k1 = ka - (ka - f) * (segA[q] as Float);
+                var k2 = ka - (ka - f) * (segB[q] as Float);
+                dc.drawLine(vx + (fx - vx) * k1, vy + (bottom - vy) * k1, vx + (fx - vx) * k2, vy + (bottom - vy) * k2);
+            }
+            for (var q2 = 0; q2 < 2; q2++) {
+                var wy = top + (bottom - top) * (wallV[pat * 2 + q2] as Number) / 100;
+                var pk1 = ka - (ka - f) * 0.2;
+                var pk2 = ka - (ka - f) * 0.75;
+                dc.drawLine(vx + (left - vx) * pk1, vy + (wy - vy) * pk1, vx + (left - vx) * pk2, vy + (wy - vy) * pk2);
+                dc.drawLine(vx + (right - vx) * pk1, vy + (wy - vy) * pk1, vx + (right - vx) * pk2, vy + (wy - vy) * pk2);
+            }
+            ka = f;
         }
 
         // rails from the near opening to the far end
@@ -1020,11 +1308,18 @@ class VectorRunView extends WatchUi.WatchFace {
         dc.drawLine(left - s(26), top, left, top);
         dc.drawLine(right, top, right + s(26), top);
 
+        // decorative counters above the trench corners, ticking every second
+        var tick = (clock.hour * 3600 + clock.min * 60 + clock.sec) % 10000;
+        var tickR = (tick * 7 + 2203) % 10000;
+        dc.setColor(_dim, Graphics.COLOR_TRANSPARENT);
+        drawTinyNumber(dc, left - s(40), top - s(20), tick, 4);
+        drawTinyNumber(dc, right + s(2), top - s(20), tickR, 4);
+
         // side scales: left = step goal progress, right = battery
         // side readouts measure themselves; a side scale is left out if its
         // readout (e.g. Polish TĘTNO on a 390 px watch) would not fit beside it
-        var f1 = $.getProp("Field1", $.settingDefault("Field1"));
-        var f2 = $.getProp("Field2", $.settingDefault("Field2"));
+        var f1 = _f1;
+        var f2 = _f2;
         var w1 = stackWidth(dc, f1, data);
         var w2 = stackWidth(dc, f2, data);
         var ladL = left - s(14);
@@ -1052,6 +1347,12 @@ class VectorRunView extends WatchUi.WatchFace {
             drawBurst(dc, vx, vy, clock.sec);
         }
         drawReticle(dc, vx, vy, locked);
+        if (!locked && goal > 0) {
+            // outer brackets close in on the reticle as the goal gets nearer
+            var br = s(18) + (s(40) * (1.0 - (data[:progress] as Float))).toNumber();
+            dc.setPenWidth(s(2));
+            drawBrackets(dc, vx, vy, br, s(10));
+        }
 
         // countdown: steps remaining to goal
         if (remaining > 99999) {
@@ -1073,20 +1374,26 @@ class VectorRunView extends WatchUi.WatchFace {
                 div /= 10;
             }
             dc.setColor(_main, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(_cx, s(388), Graphics.FONT_XTINY, txt(:toGoal), just);
+            // a wide caption would run into field 3's value and the
+            // temperature beside it, so it drops below them
+            var capY = s(388);
+            if (dc.getTextWidthInPixels(txt(:toGoal), Graphics.FONT_XTINY) > s(150)) {
+                capY = s(398);
+            }
+            dc.drawText(_cx, capY, Graphics.FONT_XTINY, txt(:toGoal), just);
         } else {
             // Goal reached: the 00000 digits are replaced by the caption, which
             // sits between field 3 and the weather - on one line if it fits,
             // otherwise split onto two (TARGET / LOCKED).
             var cap = txt(:locked);
-            var f3l = $.getProp("Field3", $.settingDefault("Field3"));
+            var f3l = _f3;
             var w3 = smallWidth(dc, f3l, data);
             var ww = dc.getTextWidthInPixels(tempText(), Graphics.FONT_XTINY);
             if (ww < s(26)) {
                 ww = s(26);
             }
-            var leftEdge = (w3 > 0 ? s(102) + w3 / 2 : s(60)) + s(8);
-            var rightEdge = (_temp != null ? s(352) - ww / 2 : _w - s(60)) - s(8);
+            var leftEdge = (w3 > 0 ? targetField3X(dc, f3l, data) + w3 / 2 : s(60)) + s(8);
+            var rightEdge = (_temp != null ? s(344) - ww / 2 : _w - s(60)) - s(8);
             var avail = rightEdge - leftEdge;
             var cx = (leftEdge + rightEdge) / 2;
             var hX = dc.getFontHeight(Graphics.FONT_XTINY);
@@ -1105,8 +1412,8 @@ class VectorRunView extends WatchUi.WatchFace {
         drawFieldStack(dc, sideX(w1, innerL, true), vy, f1, data);
         drawFieldStack(dc, sideX(w2, innerR, false), vy, f2, data);
         // field 3 and weather sit wide of the countdown digits
-        drawSmallField(dc, s(102), s(354), $.getProp("Field3", $.settingDefault("Field3")), data);
-        drawWeatherStack(dc, s(352), s(354));
+        drawSmallField(dc, targetField3X(dc, _f3, data), s(354), _f3, data);
+        drawWeatherStack(dc, s(344), s(354));
     }
 
     // U-shaped trench cross-section scaled toward the vanishing point by f.
@@ -1171,11 +1478,14 @@ class VectorRunView extends WatchUi.WatchFace {
     }
 
     private function drawReticle(dc as Dc, x as Number, y as Number, locked as Boolean) as Void {
-        var r = locked ? s(10) : s(18);
-        var arm = s(7);
         dc.setColor(_accent, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(s(3));
-        // four corner brackets
+        drawBrackets(dc, x, y, locked ? s(10) : s(18), s(7));
+        dc.fillCircle(x, y, locked ? s(4) : s(2));
+    }
+
+    // Four corner brackets, r from the centre, in the current colour and pen.
+    private function drawBrackets(dc as Dc, x as Number, y as Number, r as Number, arm as Number) as Void {
         dc.drawLine(x - r, y - r, x - r + arm, y - r);
         dc.drawLine(x - r, y - r, x - r, y - r + arm);
         dc.drawLine(x + r, y - r, x + r - arm, y - r);
@@ -1184,7 +1494,6 @@ class VectorRunView extends WatchUi.WatchFace {
         dc.drawLine(x - r, y + r, x - r, y + r - arm);
         dc.drawLine(x + r, y + r, x + r - arm, y + r);
         dc.drawLine(x + r, y + r, x + r, y + r - arm);
-        dc.fillCircle(x, y, locked ? s(4) : s(2));
     }
 
     // --------------------------------------------------------- radar style
@@ -1197,6 +1506,14 @@ class VectorRunView extends WatchUi.WatchFace {
         var rx = _cx;
         var ry = _cy + s(34);
         var rr = s(110);
+
+        if (_crt) {
+            var sg = clock.sec * Math.PI / 30.0;
+            dc.setColor($.shade(_main, 0.22), Graphics.COLOR_TRANSPARENT);
+            dc.setPenWidth(s(8));
+            dc.drawCircle(rx, ry, rr);
+            dc.drawLine(rx, ry, rx + rr * Math.sin(sg), ry - rr * Math.cos(sg));
+        }
 
         // rings, cross and bearing ticks
         dc.setPenWidth(s(2));
@@ -1257,13 +1574,13 @@ class VectorRunView extends WatchUi.WatchFace {
             Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // readouts
-        var rf1 = $.getProp("Field1", $.settingDefault("Field1"));
-        var rf2 = $.getProp("Field2", $.settingDefault("Field2"));
+        var rf1 = _f1;
+        var rf2 = _f2;
         drawFieldStack(dc, sideX(stackWidth(dc, rf1, data), rx - rr - s(4), true), ry, rf1, data);
         drawFieldStack(dc, sideX(stackWidth(dc, rf2, data), rx + rr + s(4), false), ry, rf2, data);
         // field 3 and weather sit wide of the radar ring: each is measured and
         // slid outward if its top corner would touch the ring
-        var f3 = $.getProp("Field3", $.settingDefault("Field3"));
+        var f3 = _f3;
         var by = s(350);
         var hX = dc.getFontHeight(Graphics.FONT_XTINY);
         var topY = by - s(12) - hX / 2;
@@ -1302,11 +1619,11 @@ class VectorRunView extends WatchUi.WatchFace {
     // ------------------------------------------------------ always-on mode
 
     // Thin digits plus outlines of the current style, all nudged a few pixels
-    // every minute to avoid burn-in. Outlines are full-colour 2-3 px lines;
+    // sideways and up/down every minute (25 positions) to avoid burn-in. Outlines are full-colour 2-3 px lines;
     // the total stays around 2% lit pixels, far below the 10% AMOLED limit.
     private function drawAlwaysOn(dc as Dc, clock as System.ClockTime, style as Number) as Void {
         var dx = (((clock.min % 5) - 2) * 6 * _k).toNumber();
-        var dy = ((((clock.min / 5) % 5) - 2) * 6 * _k).toNumber();
+        var dy = ((((clock.min * 2 + clock.min / 5) % 5) - 2) * 6 * _k).toNumber();
         var line = $.shade(_main, 0.85);
         dc.setPenWidth(s(2));
 

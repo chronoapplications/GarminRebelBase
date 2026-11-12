@@ -1,0 +1,420 @@
+{
+  "settings" : [ {
+    "key" : "Style",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "StyleTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "StyleOrbit",
+      "value" : 0
+    }, {
+      "display" : "StyleTarget",
+      "value" : 1
+    }, {
+      "display" : "StyleRadar",
+      "value" : 2
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "Theme",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "ThemeTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "ColorGreen",
+      "value" : 0
+    }, {
+      "display" : "ColorAmber",
+      "value" : 1
+    }, {
+      "display" : "ColorCyan",
+      "value" : 2
+    }, {
+      "display" : "ColorRed",
+      "value" : 3
+    }, {
+      "display" : "ColorWhite",
+      "value" : 4
+    }, {
+      "display" : "ColorMagenta",
+      "value" : 5
+    }, {
+      "display" : "ColorYellow",
+      "value" : 6
+    }, {
+      "display" : "ColorBlue",
+      "value" : 7
+    }, {
+      "display" : "ColorOrange",
+      "value" : 8
+    }, {
+      "display" : "ColorPurple",
+      "value" : 9
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "Accent",
+    "valueType" : "number",
+    "defaultValue" : 3,
+    "configTitle" : "AccentTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "ColorGreen",
+      "value" : 0
+    }, {
+      "display" : "ColorAmber",
+      "value" : 1
+    }, {
+      "display" : "ColorCyan",
+      "value" : 2
+    }, {
+      "display" : "ColorRed",
+      "value" : 3
+    }, {
+      "display" : "ColorWhite",
+      "value" : 4
+    }, {
+      "display" : "ColorMagenta",
+      "value" : 5
+    }, {
+      "display" : "ColorYellow",
+      "value" : 6
+    }, {
+      "display" : "ColorBlue",
+      "value" : 7
+    }, {
+      "display" : "ColorOrange",
+      "value" : 8
+    }, {
+      "display" : "ColorPurple",
+      "value" : 9
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "Planet",
+    "valueType" : "number",
+    "defaultValue" : 3,
+    "configTitle" : "PlanetTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "ColorGreen",
+      "value" : 0
+    }, {
+      "display" : "ColorAmber",
+      "value" : 1
+    }, {
+      "display" : "ColorCyan",
+      "value" : 2
+    }, {
+      "display" : "ColorRed",
+      "value" : 3
+    }, {
+      "display" : "ColorWhite",
+      "value" : 4
+    }, {
+      "display" : "ColorMagenta",
+      "value" : 5
+    }, {
+      "display" : "ColorYellow",
+      "value" : 6
+    }, {
+      "display" : "ColorBlue",
+      "value" : 7
+    }, {
+      "display" : "ColorOrange",
+      "value" : 8
+    }, {
+      "display" : "ColorPurple",
+      "value" : 9
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "Field1",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "Field1Title",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "FieldHr",
+      "value" : 0
+    }, {
+      "display" : "FieldBattery",
+      "value" : 1
+    }, {
+      "display" : "FieldBody",
+      "value" : 2
+    }, {
+      "display" : "FieldStress",
+      "value" : 3
+    }, {
+      "display" : "FieldCalories",
+      "value" : 4
+    }, {
+      "display" : "FieldDistance",
+      "value" : 5
+    }, {
+      "display" : "FieldFloors",
+      "value" : 6
+    }, {
+      "display" : "FieldNotifications",
+      "value" : 7
+    }, {
+      "display" : "FieldSteps",
+      "value" : 8
+    }, {
+      "display" : "FieldNone",
+      "value" : 9
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "Field2",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "Field2Title",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "FieldHr",
+      "value" : 0
+    }, {
+      "display" : "FieldBattery",
+      "value" : 1
+    }, {
+      "display" : "FieldBody",
+      "value" : 2
+    }, {
+      "display" : "FieldStress",
+      "value" : 3
+    }, {
+      "display" : "FieldCalories",
+      "value" : 4
+    }, {
+      "display" : "FieldDistance",
+      "value" : 5
+    }, {
+      "display" : "FieldFloors",
+      "value" : 6
+    }, {
+      "display" : "FieldNotifications",
+      "value" : 7
+    }, {
+      "display" : "FieldSteps",
+      "value" : 8
+    }, {
+      "display" : "FieldNone",
+      "value" : 9
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "Field3",
+    "valueType" : "number",
+    "defaultValue" : 8,
+    "configTitle" : "Field3Title",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "FieldHr",
+      "value" : 0
+    }, {
+      "display" : "FieldBattery",
+      "value" : 1
+    }, {
+      "display" : "FieldBody",
+      "value" : 2
+    }, {
+      "display" : "FieldStress",
+      "value" : 3
+    }, {
+      "display" : "FieldCalories",
+      "value" : 4
+    }, {
+      "display" : "FieldDistance",
+      "value" : 5
+    }, {
+      "display" : "FieldFloors",
+      "value" : 6
+    }, {
+      "display" : "FieldNotifications",
+      "value" : 7
+    }, {
+      "display" : "FieldSteps",
+      "value" : 8
+    }, {
+      "display" : "FieldNone",
+      "value" : 9
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  } ],
+  "supportsLiveValidation" : false,
+  "languages" : {
+    "pol" : {
+      "Field1Title" : "Pole 1",
+      "MinPattern" : "$1$ MIN",
+      "ContactsMany" : "$1$ KONTAKTÓW",
+      "LblMi" : "MI",
+      "ColorRed" : "Czerwony",
+      "LblBatPct" : "BAT%",
+      "LblKcal" : "KCAL",
+      "ContactsOne" : "1 KONTAKT",
+      "Field2Title" : "Pole 2",
+      "ColorWhite" : "Biały",
+      "LblHr" : "TĘTNO",
+      "StyleRadar" : "Radar",
+      "LblFloors" : "PIĘTRA",
+      "ColorOrange" : "Pomarańczowy",
+      "ContactsNone" : "BRAK KONTAKTÓW",
+      "LblStress" : "STRES",
+      "Now" : "TERAZ",
+      "Field3Pattern" : "$2$ $1$",
+      "PlanetTitle" : "Kolor planety",
+      "ColorPurple" : "Fioletowy",
+      "Current" : "Wybrany",
+      "LblSteps" : "KROKI",
+      "ThemeTitle" : "Kolor główny",
+      "ColorBlue" : "Niebieski",
+      "FieldDistance" : "Dystans",
+      "ContactsFew" : "$1$ KONTAKTY",
+      "LblKm" : "KM",
+      "StyleTitle" : "Styl",
+      "ColorYellow" : "Żółty",
+      "FieldFloors" : "Piętra",
+      "AppName" : "Baza Rebeliantów",
+      "FieldBody" : "Body Battery",
+      "ColorMagenta" : "Magenta",
+      "Field3Title" : "Pole 3",
+      "Locked" : "NA CELU",
+      "LongFloors" : "PIĘTRA",
+      "LblBat" : "BAT",
+      "LongBat" : "BATERIA",
+      "ToGoal" : "DO CELU",
+      "ColorGreen" : "Zielony",
+      "LblMsgs" : "POWIAD",
+      "ColorAmber" : "Bursztynowy",
+      "FieldHr" : "Tętno",
+      "FieldSteps" : "Kroki",
+      "LongStress" : "STRES",
+      "FieldCalories" : "Kalorie",
+      "FieldNone" : "Brak",
+      "FieldNotifications" : "Powiadomienia",
+      "StyleOrbit" : "Orbita",
+      "LongBody" : "BODY BATT",
+      "InRange" : "W ZASIĘGU",
+      "AccentTitle" : "Kolor akcentu",
+      "ColorCyan" : "Turkusowy",
+      "FieldBattery" : "Bateria",
+      "LongMsgs" : "WIADOMOŚCI",
+      "FieldStress" : "Stres",
+      "LblBody" : "BB",
+      "StyleTarget" : "Celowanie"
+    },
+    "valyrian" : {
+      "Field1Title" : "Field 1",
+      "MinPattern" : "$1$ MIN",
+      "ContactsMany" : "$1$ CONTACTS",
+      "LblMi" : "MI",
+      "ColorRed" : "Red",
+      "LblBatPct" : "BAT%",
+      "LblKcal" : "KCAL",
+      "ContactsOne" : "1 CONTACT",
+      "Field2Title" : "Field 2",
+      "ColorWhite" : "White",
+      "LblHr" : "HR",
+      "StyleRadar" : "Radar",
+      "LblFloors" : "FLRS",
+      "ColorOrange" : "Orange",
+      "ContactsNone" : "NO CONTACTS",
+      "LblStress" : "STR",
+      "Now" : "NOW",
+      "Field3Pattern" : "$1$ $2$",
+      "PlanetTitle" : "Planet color",
+      "ColorPurple" : "Purple",
+      "Current" : "Current",
+      "LblSteps" : "STEPS",
+      "ThemeTitle" : "Main color",
+      "ColorBlue" : "Blue",
+      "FieldDistance" : "Distance",
+      "ContactsFew" : "$1$ CONTACTS",
+      "LblKm" : "KM",
+      "StyleTitle" : "Style",
+      "ColorYellow" : "Yellow",
+      "FieldFloors" : "Floors",
+      "AppName" : "Rebel Base",
+      "FieldBody" : "Body Battery",
+      "ColorMagenta" : "Magenta",
+      "Field3Title" : "Field 3",
+      "Locked" : "TARGET LOCKED",
+      "LongFloors" : "FLOORS",
+      "LblBat" : "BAT",
+      "LongBat" : "BATTERY",
+      "ToGoal" : "TO GOAL",
+      "ColorGreen" : "Green",
+      "LblMsgs" : "MSGS",
+      "ColorAmber" : "Amber",
+      "FieldHr" : "Heart rate",
+      "FieldSteps" : "Steps",
+      "LongStress" : "STRESS",
+      "FieldCalories" : "Calories",
+      "FieldNone" : "None",
+      "FieldNotifications" : "Notifications",
+      "StyleOrbit" : "Orbit tracker",
+      "LongBody" : "BODY BATT",
+      "InRange" : "IN RANGE",
+      "AccentTitle" : "Accent color",
+      "ColorCyan" : "Cyan",
+      "FieldBattery" : "Battery",
+      "LongMsgs" : "MESSAGES",
+      "FieldStress" : "Stress",
+      "LblBody" : "BB",
+      "StyleTarget" : "Targeting"
+    }
+  }
+}

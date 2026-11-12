@@ -1,0 +1,31 @@
+Retro-Sci-Fi-Watchface im Vektorstil mit drei taktischen Stilen, Live-Countdowns und echten Mond- und Sonnendaten.
+
+Hol dir eine Kontrollraum-Anzeige der späten 70er ans Handgelenk. Rebel Base zeichnet alles als leuchtende Vektorlinien auf Schwarz, wie ein alter Taktikcomputer, und macht aus deinem Tag Live-Countdowns.
+
+DREI STILE
+- Orbit-Tracker: Ein Gasriese füllt die linke Seite des Displays. Jede Stunde zieht ein Drahtgitter-Mond über ihn hinweg auf ein Ziel zu, und IN REICHWEITE zählt die Minuten, bis er den Rand des Planeten hinter sich lässt. Zur vollen Stunde wird das Ziel erfasst und der Countdown zeigt JETZT. Die Tag-Nacht-Linie des Planeten folgt deinem echten Sonnenauf- und -untergang, und der Mond zeigt die aktuelle Mondphase.
+- Zielerfassung: Flieg durch einen Drahtgitter-Graben auf ein Fadenkreuz zu. Der Countdown zeigt die Schritte, die bis zu deinem Tagesziel fehlen. Erreichst du es, wird das Ziel mit einem pulsierenden Blitz erfasst.
+- Radar: Ein Strahl dreht sich einmal pro Minute, Stunde und Minute sind Punkte auf dem Schirm. Ungelesene Benachrichtigungen erscheinen als Kontakte, die aufleuchten, wenn der Strahl sie überstreicht.
+
+GANZ NACH DEINEM GESCHMACK
+- Je 10 Farben für Hauptanzeige, Akzent und Planet
+- 3 Datenfelder: Herzfrequenz, Akku, Body Battery, Stress, Kalorien, Distanz, Stockwerke, Benachrichtigungen, Schritte, Sekunden, Sonnenauf-/-untergang, Intensitätsminuten oder Höhe
+- Akkuwarnung: Die Akkuanzeige wechselt bei 15 % die Farbe
+- Optional kleine Sekunden neben der Uhrzeit
+- Optional schräge Ziffern und CRT-Leuchten mit Bildzeilen
+- Wettersymbol und Temperatur von deiner Uhr
+- Fortschritt zum Schrittziel auf der Lünette (Zielerfassung und Radar)
+
+GEDRÜCKT HALTEN: Halte eine Anzeige gedrückt, um das passende Widget zu öffnen: Herzfrequenz, Body Battery, Wetter, Schritte, Benachrichtigungen und mehr.
+
+FÜR ALWAYS-ON GEEIGNET: eine minimale, einbrennsichere Ansicht für AMOLED-Displays mit der Uhrzeit und einem Umriss des gewählten Stils.
+
+Stil, Farben und Felder änderst du auf der Uhr (Displaydesign, dann Anpassen) oder in der Connect IQ App.
+
+Sprachen: Englisch, Polnisch, Deutsch, Französisch, Spanisch.
+
+BERECHTIGUNGEN
+- Sensorverlauf: liest Body Battery und Stress für die Datenfelder.
+- Complications: öffnet das passende Widget, wenn du eine Anzeige gedrückt hältst.
+
+Keine Daten verlassen deine Uhr.

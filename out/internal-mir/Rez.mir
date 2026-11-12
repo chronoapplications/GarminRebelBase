@@ -1,0 +1,1700 @@
+[ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 12; @symbol_moduledef = [Strings,12,11,18]; ]
+    module Strings {
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; @symbol_vardef = [Field1Title,13,27,38]; @symbol_type<0> = [ResourceId,13,42,52]; ]
+        var Field1Title as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; @symbol_vardef = [MinPattern,14,27,37]; @symbol_type<0> = [ResourceId,14,41,51]; ]
+        var MinPattern as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 15; @position = 27; initialized = true; @symbol_vardef = [ContactsMany,15,27,39]; @symbol_type<0> = [ResourceId,15,43,53]; ]
+        var ContactsMany as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 16; @position = 27; initialized = true; @symbol_vardef = [LblMi,16,27,32]; @symbol_type<0> = [ResourceId,16,36,46]; ]
+        var LblMi as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 17; @position = 27; initialized = true; @symbol_vardef = [ColorRed,17,27,35]; @symbol_type<0> = [ResourceId,17,39,49]; ]
+        var ColorRed as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 18; @position = 27; initialized = true; @symbol_vardef = [LblBatPct,18,27,36]; @symbol_type<0> = [ResourceId,18,40,50]; ]
+        var LblBatPct as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 19; @position = 27; initialized = true; @symbol_vardef = [LblKcal,19,27,34]; @symbol_type<0> = [ResourceId,19,38,48]; ]
+        var LblKcal as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 20; @position = 27; initialized = true; @symbol_vardef = [ContactsOne,20,27,38]; @symbol_type<0> = [ResourceId,20,42,52]; ]
+        var ContactsOne as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 21; @position = 27; initialized = true; @symbol_vardef = [Field2Title,21,27,38]; @symbol_type<0> = [ResourceId,21,42,52]; ]
+        var Field2Title as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 22; @position = 27; initialized = true; @symbol_vardef = [ColorWhite,22,27,37]; @symbol_type<0> = [ResourceId,22,41,51]; ]
+        var ColorWhite as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 23; @position = 27; initialized = true; @symbol_vardef = [LblHr,23,27,32]; @symbol_type<0> = [ResourceId,23,36,46]; ]
+        var LblHr as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 24; @position = 27; initialized = true; @symbol_vardef = [StyleRadar,24,27,37]; @symbol_type<0> = [ResourceId,24,41,51]; ]
+        var StyleRadar as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 25; @position = 27; initialized = true; @symbol_vardef = [LblFloors,25,27,36]; @symbol_type<0> = [ResourceId,25,40,50]; ]
+        var LblFloors as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 26; @position = 27; initialized = true; @symbol_vardef = [ColorOrange,26,27,38]; @symbol_type<0> = [ResourceId,26,42,52]; ]
+        var ColorOrange as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 27; @position = 27; initialized = true; @symbol_vardef = [ContactsNone,27,27,39]; @symbol_type<0> = [ResourceId,27,43,53]; ]
+        var ContactsNone as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 28; @position = 27; initialized = true; @symbol_vardef = [LblStress,28,27,36]; @symbol_type<0> = [ResourceId,28,40,50]; ]
+        var LblStress as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 29; @position = 27; initialized = true; @symbol_vardef = [Now,29,27,30]; @symbol_type<0> = [ResourceId,29,34,44]; ]
+        var Now as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 30; @position = 27; initialized = true; @symbol_vardef = [Field3Pattern,30,27,40]; @symbol_type<0> = [ResourceId,30,44,54]; ]
+        var Field3Pattern as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 31; @position = 27; initialized = true; @symbol_vardef = [PlanetTitle,31,27,38]; @symbol_type<0> = [ResourceId,31,42,52]; ]
+        var PlanetTitle as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 32; @position = 27; initialized = true; @symbol_vardef = [ColorPurple,32,27,38]; @symbol_type<0> = [ResourceId,32,42,52]; ]
+        var ColorPurple as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 33; @position = 27; initialized = true; @symbol_vardef = [Current,33,27,34]; @symbol_type<0> = [ResourceId,33,38,48]; ]
+        var Current as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 34; @position = 27; initialized = true; @symbol_vardef = [LblSteps,34,27,35]; @symbol_type<0> = [ResourceId,34,39,49]; ]
+        var LblSteps as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 35; @position = 27; initialized = true; @symbol_vardef = [ThemeTitle,35,27,37]; @symbol_type<0> = [ResourceId,35,41,51]; ]
+        var ThemeTitle as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 36; @position = 27; initialized = true; @symbol_vardef = [ColorBlue,36,27,36]; @symbol_type<0> = [ResourceId,36,40,50]; ]
+        var ColorBlue as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 37; @position = 27; initialized = true; @symbol_vardef = [FieldDistance,37,27,40]; @symbol_type<0> = [ResourceId,37,44,54]; ]
+        var FieldDistance as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 38; @position = 27; initialized = true; @symbol_vardef = [ContactsFew,38,27,38]; @symbol_type<0> = [ResourceId,38,42,52]; ]
+        var ContactsFew as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 39; @position = 27; initialized = true; @symbol_vardef = [LblKm,39,27,32]; @symbol_type<0> = [ResourceId,39,36,46]; ]
+        var LblKm as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 40; @position = 27; initialized = true; @symbol_vardef = [StyleTitle,40,27,37]; @symbol_type<0> = [ResourceId,40,41,51]; ]
+        var StyleTitle as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 41; @position = 27; initialized = true; @symbol_vardef = [ColorYellow,41,27,38]; @symbol_type<0> = [ResourceId,41,42,52]; ]
+        var ColorYellow as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 42; @position = 27; initialized = true; @symbol_vardef = [FieldFloors,42,27,38]; @symbol_type<0> = [ResourceId,42,42,52]; ]
+        var FieldFloors as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 43; @position = 27; initialized = true; @symbol_vardef = [AppName,43,27,34]; @symbol_type<0> = [ResourceId,43,38,48]; ]
+        var AppName as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 44; @position = 27; initialized = true; @symbol_vardef = [FieldBody,44,27,36]; @symbol_type<0> = [ResourceId,44,40,50]; ]
+        var FieldBody as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 45; @position = 27; initialized = true; @symbol_vardef = [ColorMagenta,45,27,39]; @symbol_type<0> = [ResourceId,45,43,53]; ]
+        var ColorMagenta as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 46; @position = 27; initialized = true; @symbol_vardef = [Field3Title,46,27,38]; @symbol_type<0> = [ResourceId,46,42,52]; ]
+        var Field3Title as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 47; @position = 27; initialized = true; @symbol_vardef = [Locked,47,27,33]; @symbol_type<0> = [ResourceId,47,37,47]; ]
+        var Locked as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 48; @position = 27; initialized = true; @symbol_vardef = [LongFloors,48,27,37]; @symbol_type<0> = [ResourceId,48,41,51]; ]
+        var LongFloors as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 49; @position = 27; initialized = true; @symbol_vardef = [LblBat,49,27,33]; @symbol_type<0> = [ResourceId,49,37,47]; ]
+        var LblBat as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 50; @position = 27; initialized = true; @symbol_vardef = [LongBat,50,27,34]; @symbol_type<0> = [ResourceId,50,38,48]; ]
+        var LongBat as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 51; @position = 27; initialized = true; @symbol_vardef = [ToGoal,51,27,33]; @symbol_type<0> = [ResourceId,51,37,47]; ]
+        var ToGoal as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 52; @position = 27; initialized = true; @symbol_vardef = [ColorGreen,52,27,37]; @symbol_type<0> = [ResourceId,52,41,51]; ]
+        var ColorGreen as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 53; @position = 27; initialized = true; @symbol_vardef = [LblMsgs,53,27,34]; @symbol_type<0> = [ResourceId,53,38,48]; ]
+        var LblMsgs as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 54; @position = 27; initialized = true; @symbol_vardef = [ColorAmber,54,27,37]; @symbol_type<0> = [ResourceId,54,41,51]; ]
+        var ColorAmber as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 55; @position = 27; initialized = true; @symbol_vardef = [FieldHr,55,27,34]; @symbol_type<0> = [ResourceId,55,38,48]; ]
+        var FieldHr as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 56; @position = 27; initialized = true; @symbol_vardef = [FieldSteps,56,27,37]; @symbol_type<0> = [ResourceId,56,41,51]; ]
+        var FieldSteps as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 57; @position = 27; initialized = true; @symbol_vardef = [LongStress,57,27,37]; @symbol_type<0> = [ResourceId,57,41,51]; ]
+        var LongStress as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 58; @position = 27; initialized = true; @symbol_vardef = [FieldCalories,58,27,40]; @symbol_type<0> = [ResourceId,58,44,54]; ]
+        var FieldCalories as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 59; @position = 27; initialized = true; @symbol_vardef = [FieldNone,59,27,36]; @symbol_type<0> = [ResourceId,59,40,50]; ]
+        var FieldNone as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 60; @position = 27; initialized = true; @symbol_vardef = [FieldNotifications,60,27,45]; @symbol_type<0> = [ResourceId,60,49,59]; ]
+        var FieldNotifications as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 61; @position = 27; initialized = true; @symbol_vardef = [StyleOrbit,61,27,37]; @symbol_type<0> = [ResourceId,61,41,51]; ]
+        var StyleOrbit as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 62; @position = 27; initialized = true; @symbol_vardef = [LongBody,62,27,35]; @symbol_type<0> = [ResourceId,62,39,49]; ]
+        var LongBody as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 63; @position = 27; initialized = true; @symbol_vardef = [InRange,63,27,34]; @symbol_type<0> = [ResourceId,63,38,48]; ]
+        var InRange as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 64; @position = 27; initialized = true; @symbol_vardef = [AccentTitle,64,27,38]; @symbol_type<0> = [ResourceId,64,42,52]; ]
+        var AccentTitle as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 65; @position = 27; initialized = true; @symbol_vardef = [ColorCyan,65,27,36]; @symbol_type<0> = [ResourceId,65,40,50]; ]
+        var ColorCyan as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 66; @position = 27; initialized = true; @symbol_vardef = [FieldBattery,66,27,39]; @symbol_type<0> = [ResourceId,66,43,53]; ]
+        var FieldBattery as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 67; @position = 27; initialized = true; @symbol_vardef = [LongMsgs,67,27,35]; @symbol_type<0> = [ResourceId,67,39,49]; ]
+        var LongMsgs as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 68; @position = 27; initialized = true; @symbol_vardef = [FieldStress,68,27,38]; @symbol_type<0> = [ResourceId,68,42,52]; ]
+        var FieldStress as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 69; @position = 27; initialized = true; @symbol_vardef = [LblBody,69,27,34]; @symbol_type<0> = [ResourceId,69,38,48]; ]
+        var LblBody as ResourceId;
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 70; @position = 27; initialized = true; @symbol_vardef = [StyleTarget,70,27,38]; @symbol_type<0> = [ResourceId,70,42,52]; ]
+        var StyleTarget as ResourceId;
+    }
+    [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 73; @symbol_moduledef = [Styles,73,11,17]; ]
+    module Styles {
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 73; ]
+        <init> {
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 74; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,74,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 74; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 75; @position = 18; @symbol_constdef = [exclude,75,18,25]; @symbol_type<0> = [Boolean,75,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 78; @symbol_moduledef = [system_size__menu_header,78,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 78; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [width,79,18,23]; @symbol_type<0> = [Number,79,27,33]; ]
+            const width as Number = 454;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 80; @position = 18; @symbol_constdef = [height,80,18,24]; @symbol_type<0> = [Number,80,28,34]; ]
+            const height as Number = 172;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 83; @symbol_moduledef = [system_loc__hint_button_left_bottom,83,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 83; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [x,84,18,19]; @symbol_type<0> = [Number,84,23,29]; ]
+            const x as Number = 16;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 85; @position = 18; @symbol_constdef = [y,85,18,19]; @symbol_type<0> = [Number,85,23,29]; ]
+            const y as Number = 284;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 88; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,88,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 88; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 89; @position = 18; @symbol_constdef = [exclude,89,18,25]; @symbol_type<0> = [Boolean,89,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 92; @symbol_moduledef = [prompt_loc__body_no_title,92,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 92; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 93; @position = 18; @symbol_constdef = [x,93,18,19]; @symbol_type<0> = [Number,93,23,29]; ]
+            const x as Number = 76;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 94; @position = 18; @symbol_constdef = [y,94,18,19]; @symbol_type<0> = [Number,94,23,29]; ]
+            const y as Number = 70;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 97; @symbol_moduledef = [system_icon_dark__about,97,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 97; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 98; @position = 18; @symbol_constdef = [filename,98,18,26]; @symbol_type<0> = [String,98,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__about.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 99; @position = 18; @symbol_constdef = [compress,99,18,26]; @symbol_type<0> = [String,99,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 100; @position = 18; @symbol_constdef = [dithering,100,18,27]; @symbol_type<0> = [String,100,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 101; @position = 18; @symbol_constdef = [automaticPalette,101,18,34]; @symbol_type<0> = [String,101,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 102; @position = 18; @symbol_constdef = [packingFormat,102,18,31]; @symbol_type<0> = [String,102,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 105; @symbol_moduledef = [system_icon_light__question,105,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 105; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 106; @position = 18; @symbol_constdef = [filename,106,18,26]; @symbol_type<0> = [String,106,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__question.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 107; @position = 18; @symbol_constdef = [compress,107,18,26]; @symbol_type<0> = [String,107,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 108; @position = 18; @symbol_constdef = [dithering,108,18,27]; @symbol_type<0> = [String,108,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 109; @position = 18; @symbol_constdef = [automaticPalette,109,18,34]; @symbol_type<0> = [String,109,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 110; @position = 18; @symbol_constdef = [packingFormat,110,18,31]; @symbol_type<0> = [String,110,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 113; @symbol_moduledef = [system_loc__hint_button_left_top,113,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 113; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 114; @position = 18; @symbol_constdef = [exclude,114,18,25]; @symbol_type<0> = [Boolean,114,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 117; @symbol_moduledef = [prompt_font__title,117,15,33]; ]
+        module prompt_font__title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 117; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 118 18 ]
+                symbol [ Graphics %tmp.1 118 34 42 ];
+                %tmp.1 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.2 118 43 62 ];
+                %tmp.2 = getv %tmp.1 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.3 118 63 71 ];
+                %tmp.3 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.4 118 72 92 ];
+                %tmp.4 = getv %tmp.3 :TEXT_JUSTIFY_VCENTER;
+                %tmp.5 = bitor %tmp.2 %tmp.4;
+                putv self :justification %tmp.5;
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 119 18 ]
+                symbol [ Graphics %tmp.6 119 25 33 ];
+                %tmp.6 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.7 119 34 43 ];
+                %tmp.7 = getv %tmp.6 :FONT_TINY;
+                putv self :font %tmp.7;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 118; @position = 18; @symbol_constdef = [justification,118,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 119; @position = 18; @symbol_constdef = [font,119,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 122; @symbol_moduledef = [system_icon_dark__discard,122,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 122; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 123; @position = 18; @symbol_constdef = [filename,123,18,26]; @symbol_type<0> = [String,123,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__discard.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 124; @position = 18; @symbol_constdef = [compress,124,18,26]; @symbol_type<0> = [String,124,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 125; @position = 18; @symbol_constdef = [dithering,125,18,27]; @symbol_type<0> = [String,125,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 126; @position = 18; @symbol_constdef = [automaticPalette,126,18,34]; @symbol_type<0> = [String,126,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 127; @position = 18; @symbol_constdef = [packingFormat,127,18,31]; @symbol_type<0> = [String,127,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 130; @symbol_moduledef = [system_size__menu_item,130,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 130; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 131; @position = 18; @symbol_constdef = [width,131,18,23]; @symbol_type<0> = [Number,131,27,33]; ]
+            const width as Number = 454;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 132; @position = 18; @symbol_constdef = [height,132,18,24]; @symbol_type<0> = [Number,132,28,34]; ]
+            const height as Number = 108;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 135; @symbol_moduledef = [system_color_dark__text,135,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 135; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 137 18 ]
+                symbol [ Graphics %tmp.8 137 31 39 ];
+                %tmp.8 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.9 137 40 57 ];
+                %tmp.9 = getv %tmp.8 :COLOR_TRANSPARENT;
+                putv self :background %tmp.9;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 136; @position = 18; @symbol_constdef = [color,136,18,23]; @symbol_type<0> = [Number,136,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 137; @position = 18; @symbol_constdef = [background,137,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 140; @symbol_moduledef = [system_icon_destructive__discard,140,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 140; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 141; @position = 18; @symbol_constdef = [filename,141,18,26]; @symbol_type<0> = [String,141,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_destructive__discard.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 142; @position = 18; @symbol_constdef = [dithering,142,18,27]; @symbol_type<0> = [String,142,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 143; @position = 18; @symbol_constdef = [packingFormat,143,18,31]; @symbol_type<0> = [String,143,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 146; @symbol_moduledef = [system_icon_dark__hint_action_menu,146,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 146; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 147; @position = 18; @symbol_constdef = [filename,147,18,26]; @symbol_type<0> = [String,147,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 148; @position = 18; @symbol_constdef = [dithering,148,18,27]; @symbol_type<0> = [String,148,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 149; @position = 18; @symbol_constdef = [packingFormat,149,18,31]; @symbol_type<0> = [String,149,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 152; @symbol_moduledef = [prompt_size__title,152,15,33]; ]
+        module prompt_size__title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 152; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 153; @position = 18; @symbol_constdef = [width,153,18,23]; @symbol_type<0> = [Number,153,27,33]; ]
+            const width as Number = 287;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 154; @position = 18; @symbol_constdef = [height,154,18,24]; @symbol_type<0> = [Number,154,28,34]; ]
+            const height as Number = 97;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 157; @symbol_moduledef = [confirmation_font__body,157,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 157; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 158 18 ]
+                symbol [ Graphics %tmp.10 158 34 42 ];
+                %tmp.10 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.11 158 43 62 ];
+                %tmp.11 = getv %tmp.10 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.12 158 63 71 ];
+                %tmp.12 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.13 158 72 92 ];
+                %tmp.13 = getv %tmp.12 :TEXT_JUSTIFY_VCENTER;
+                %tmp.14 = bitor %tmp.11 %tmp.13;
+                putv self :justification %tmp.14;
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 159 18 ]
+                symbol [ Graphics %tmp.15 159 25 33 ];
+                %tmp.15 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.16 159 34 43 ];
+                %tmp.16 = getv %tmp.15 :FONT_TINY;
+                putv self :font %tmp.16;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 158; @position = 18; @symbol_constdef = [justification,158,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 159; @position = 18; @symbol_constdef = [font,159,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 162; @symbol_moduledef = [system_color_dark__background,162,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 162; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 163; @position = 18; @symbol_constdef = [color,163,18,23]; @symbol_type<0> = [Number,163,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 164; @position = 18; @symbol_constdef = [background,164,18,28]; @symbol_type<0> = [Number,164,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 167; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,167,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 167; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 168; @position = 18; @symbol_constdef = [filename,168,18,26]; @symbol_type<0> = [String,168,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_destructive__hint_button_left_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 169; @position = 18; @symbol_constdef = [dithering,169,18,27]; @symbol_type<0> = [String,169,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 170; @position = 18; @symbol_constdef = [packingFormat,170,18,31]; @symbol_type<0> = [String,170,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 173; @symbol_moduledef = [system_size__launch_icon,173,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 173; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 174; @position = 18; @symbol_constdef = [scaleX,174,18,24]; @symbol_type<0> = [Number,174,28,34]; ]
+            const scaleX as Number = 65;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 175; @position = 18; @symbol_constdef = [scaleY,175,18,24]; @symbol_type<0> = [Number,175,28,34]; ]
+            const scaleY as Number = 65;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 176; @position = 18; @symbol_constdef = [scaleRelativeTo,176,18,33]; @symbol_type<0> = [String,176,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 179; @symbol_moduledef = [confirmation_input__confirm,179,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 179; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 180 18 ]
+                symbol [ WatchUi %tmp.17 180 27 34 ];
+                %tmp.17 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.18 180 35 44 ];
+                %tmp.18 = getv %tmp.17 :KEY_ENTER;
+                putv self :button %tmp.18;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 180; @position = 18; @symbol_constdef = [button,180,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 183; @symbol_moduledef = [prompt_font__body_with_title,183,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 183; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 184 18 ]
+                symbol [ Graphics %tmp.19 184 34 42 ];
+                %tmp.19 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.20 184 43 62 ];
+                %tmp.20 = getv %tmp.19 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.20;
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 185 18 ]
+                symbol [ Graphics %tmp.21 185 25 33 ];
+                %tmp.21 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.22 185 34 44 ];
+                %tmp.22 = getv %tmp.21 :FONT_XTINY;
+                putv self :font %tmp.22;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 184; @position = 18; @symbol_constdef = [justification,184,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 185; @position = 18; @symbol_constdef = [font,185,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 188; @symbol_moduledef = [confirmation_loc__body,188,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 188; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 189; @position = 18; @symbol_constdef = [x,189,18,19]; @symbol_type<0> = [Number,189,23,29]; ]
+            const x as Number = 70;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 190; @position = 18; @symbol_constdef = [y,190,18,19]; @symbol_type<0> = [Number,190,23,29]; ]
+            const y as Number = 104;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 193; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,193,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 193; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 194; @position = 18; @symbol_constdef = [filename,194,18,26]; @symbol_type<0> = [String,194,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_destructive__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 195; @position = 18; @symbol_constdef = [dithering,195,18,27]; @symbol_type<0> = [String,195,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 196; @position = 18; @symbol_constdef = [packingFormat,196,18,31]; @symbol_type<0> = [String,196,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 199; @symbol_moduledef = [prompt_color_dark__background,199,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 199; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 200; @position = 18; @symbol_constdef = [color,200,18,23]; @symbol_type<0> = [Number,200,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 201; @position = 18; @symbol_constdef = [background,201,18,28]; @symbol_type<0> = [Number,201,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 204; @symbol_moduledef = [system_icon_destructive__hint_action_menu,204,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 204; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 205; @position = 18; @symbol_constdef = [filename,205,18,26]; @symbol_type<0> = [String,205,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 206; @position = 18; @symbol_constdef = [dithering,206,18,27]; @symbol_type<0> = [String,206,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 207; @position = 18; @symbol_constdef = [packingFormat,207,18,31]; @symbol_type<0> = [String,207,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 210; @symbol_moduledef = [system_loc__hint_action_menu,210,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 210; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 211; @position = 18; @symbol_constdef = [x,211,18,19]; @symbol_type<0> = [Number,211,23,29]; ]
+            const x as Number = 379;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 212; @position = 18; @symbol_constdef = [y,212,18,19]; @symbol_type<0> = [Number,212,23,29]; ]
+            const y as Number = 89;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 215; @symbol_moduledef = [confirmation_icon__hint_confirm,215,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 215; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 216; @position = 18; @symbol_constdef = [filename,216,18,26]; @symbol_type<0> = [String,216,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 217; @position = 18; @symbol_constdef = [dithering,217,18,27]; @symbol_type<0> = [String,217,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 218; @position = 18; @symbol_constdef = [packingFormat,218,18,31]; @symbol_type<0> = [String,218,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 221; @symbol_moduledef = [system_loc__hint_button_left_middle,221,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 221; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 222; @position = 18; @symbol_constdef = [x,222,18,19]; @symbol_type<0> = [Number,222,23,29]; ]
+            const x as Number = 3;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 223; @position = 18; @symbol_constdef = [y,223,18,19]; @symbol_type<0> = [Number,223,23,29]; ]
+            const y as Number = 184;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 226; @symbol_moduledef = [prompt_size__body_no_title,226,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 226; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 227; @position = 18; @symbol_constdef = [width,227,18,23]; @symbol_type<0> = [Number,227,27,33]; ]
+            const width as Number = 302;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 228; @position = 18; @symbol_constdef = [height,228,18,24]; @symbol_type<0> = [Number,228,28,34]; ]
+            const height as Number = 315;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 231; @symbol_moduledef = [system_icon_light__hint_button_left_top,231,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 231; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 232; @position = 18; @symbol_constdef = [filename,232,18,26]; @symbol_type<0> = [String,232,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__hint_button_left_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 233; @position = 18; @symbol_constdef = [dithering,233,18,27]; @symbol_type<0> = [String,233,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 234; @position = 18; @symbol_constdef = [packingFormat,234,18,31]; @symbol_type<0> = [String,234,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 237; @symbol_moduledef = [prompt_color_light__background,237,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 237; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 238; @position = 18; @symbol_constdef = [color,238,18,23]; @symbol_type<0> = [Number,238,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 239; @position = 18; @symbol_constdef = [background,239,18,28]; @symbol_type<0> = [Number,239,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 242; @symbol_moduledef = [confirmation_input__delete,242,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 242; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 243 18 ]
+                symbol [ WatchUi %tmp.23 243 27 34 ];
+                %tmp.23 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.24 243 35 43 ];
+                %tmp.24 = getv %tmp.23 :KEY_DOWN;
+                putv self :button %tmp.24;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 243; @position = 18; @symbol_constdef = [button,243,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 246; @symbol_moduledef = [system_icon_dark__hint_button_left_top,246,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 246; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 247; @position = 18; @symbol_constdef = [filename,247,18,26]; @symbol_type<0> = [String,247,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__hint_button_left_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 248; @position = 18; @symbol_constdef = [dithering,248,18,27]; @symbol_type<0> = [String,248,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 249; @position = 18; @symbol_constdef = [packingFormat,249,18,31]; @symbol_type<0> = [String,249,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 252; @symbol_moduledef = [system_input__action_menu,252,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 252; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 253 18 ]
+                symbol [ WatchUi %tmp.25 253 27 34 ];
+                %tmp.25 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.26 253 35 44 ];
+                %tmp.26 = getv %tmp.25 :KEY_ENTER;
+                putv self :button %tmp.26;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 253; @position = 18; @symbol_constdef = [button,253,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 256; @symbol_moduledef = [system_icon_light__save,256,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 256; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 257; @position = 18; @symbol_constdef = [filename,257,18,26]; @symbol_type<0> = [String,257,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__save.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 258; @position = 18; @symbol_constdef = [compress,258,18,26]; @symbol_type<0> = [String,258,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 259; @position = 18; @symbol_constdef = [dithering,259,18,27]; @symbol_type<0> = [String,259,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 260; @position = 18; @symbol_constdef = [automaticPalette,260,18,34]; @symbol_type<0> = [String,260,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 261; @position = 18; @symbol_constdef = [packingFormat,261,18,31]; @symbol_type<0> = [String,261,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 264; @symbol_moduledef = [prompt_color_light__body,264,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 264; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 266 18 ]
+                symbol [ Graphics %tmp.27 266 31 39 ];
+                %tmp.27 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.28 266 40 57 ];
+                %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+                putv self :background %tmp.28;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 265; @position = 18; @symbol_constdef = [color,265,18,23]; @symbol_type<0> = [Number,265,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 266; @position = 18; @symbol_constdef = [background,266,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 269; @symbol_moduledef = [system_loc__subwindow,269,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 269; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 270; @position = 18; @symbol_constdef = [exclude,270,18,25]; @symbol_type<0> = [Boolean,270,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 273; @symbol_moduledef = [system_icon_light__warning,273,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 273; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 274; @position = 18; @symbol_constdef = [filename,274,18,26]; @symbol_type<0> = [String,274,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__warning.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 275; @position = 18; @symbol_constdef = [compress,275,18,26]; @symbol_type<0> = [String,275,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 276; @position = 18; @symbol_constdef = [dithering,276,18,27]; @symbol_type<0> = [String,276,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 277; @position = 18; @symbol_constdef = [automaticPalette,277,18,34]; @symbol_type<0> = [String,277,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 278; @position = 18; @symbol_constdef = [packingFormat,278,18,31]; @symbol_type<0> = [String,278,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 281; @symbol_moduledef = [confirmation_color_light__body,281,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 281; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 283 18 ]
+                symbol [ Graphics %tmp.29 283 31 39 ];
+                %tmp.29 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.30 283 40 57 ];
+                %tmp.30 = getv %tmp.29 :COLOR_TRANSPARENT;
+                putv self :background %tmp.30;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 282; @position = 18; @symbol_constdef = [color,282,18,23]; @symbol_type<0> = [Number,282,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 283; @position = 18; @symbol_constdef = [background,283,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 286; @symbol_moduledef = [confirmation_icon_light__hint_keep,286,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 286; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 287; @position = 18; @symbol_constdef = [filename,287,18,26]; @symbol_type<0> = [String,287,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 288; @position = 18; @symbol_constdef = [dithering,288,18,27]; @symbol_type<0> = [String,288,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 289; @position = 18; @symbol_constdef = [packingFormat,289,18,31]; @symbol_type<0> = [String,289,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 292; @symbol_moduledef = [activity_color_light__background,292,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 292; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 293; @position = 18; @symbol_constdef = [color,293,18,23]; @symbol_type<0> = [Number,293,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 294; @position = 18; @symbol_constdef = [background,294,18,28]; @symbol_type<0> = [Number,294,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 297; @symbol_moduledef = [system_icon_positive__hint_button_right_top,297,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 297; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 298; @position = 18; @symbol_constdef = [filename,298,18,26]; @symbol_type<0> = [String,298,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 299; @position = 18; @symbol_constdef = [dithering,299,18,27]; @symbol_type<0> = [String,299,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 300; @position = 18; @symbol_constdef = [packingFormat,300,18,31]; @symbol_type<0> = [String,300,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 303; @symbol_moduledef = [system_size__screen,303,15,34]; ]
+        module system_size__screen {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 303; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 304; @position = 18; @symbol_constdef = [width,304,18,23]; @symbol_type<0> = [Number,304,27,33]; ]
+            const width as Number = 454;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 305; @position = 18; @symbol_constdef = [height,305,18,24]; @symbol_type<0> = [Number,305,28,34]; ]
+            const height as Number = 454;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 308; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,308,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 308; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 309; @position = 18; @symbol_constdef = [filename,309,18,26]; @symbol_type<0> = [String,309,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_destructive__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 310; @position = 18; @symbol_constdef = [dithering,310,18,27]; @symbol_type<0> = [String,310,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 311; @position = 18; @symbol_constdef = [packingFormat,311,18,31]; @symbol_type<0> = [String,311,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 314; @symbol_moduledef = [system_color_light__background,314,15,45]; ]
+        module system_color_light__background {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 314; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 315; @position = 18; @symbol_constdef = [color,315,18,23]; @symbol_type<0> = [Number,315,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 316; @position = 18; @symbol_constdef = [background,316,18,28]; @symbol_type<0> = [Number,316,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 319; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,319,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 319; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 320; @position = 18; @symbol_constdef = [filename,320,18,26]; @symbol_type<0> = [String,320,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 321; @position = 18; @symbol_constdef = [dithering,321,18,27]; @symbol_type<0> = [String,321,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 322; @position = 18; @symbol_constdef = [packingFormat,322,18,31]; @symbol_type<0> = [String,322,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 325; @symbol_moduledef = [confirmation_loc__hint_confirm,325,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 325; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 326; @position = 18; @symbol_constdef = [x,326,18,19]; @symbol_type<0> = [Number,326,23,29]; ]
+            const x as Number = 379;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 327; @position = 18; @symbol_constdef = [y,327,18,19]; @symbol_type<0> = [Number,327,23,29]; ]
+            const y as Number = 89;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 330; @symbol_moduledef = [activity_color_dark__text,330,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 330; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 332 18 ]
+                symbol [ Graphics %tmp.31 332 31 39 ];
+                %tmp.31 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.32 332 40 57 ];
+                %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
+                putv self :background %tmp.32;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 331; @position = 18; @symbol_constdef = [color,331,18,23]; @symbol_type<0> = [Number,331,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 332; @position = 18; @symbol_constdef = [background,332,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 335; @symbol_moduledef = [confirmation_input__keep,335,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 335; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 336 18 ]
+                symbol [ WatchUi %tmp.33 336 27 34 ];
+                %tmp.33 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ESC %tmp.34 336 35 42 ];
+                %tmp.34 = getv %tmp.33 :KEY_ESC;
+                putv self :button %tmp.34;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 336; @position = 18; @symbol_constdef = [button,336,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 339; @symbol_moduledef = [prompt_loc__body_with_title,339,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 339; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 340; @position = 18; @symbol_constdef = [x,340,18,19]; @symbol_type<0> = [Number,340,23,29]; ]
+            const x as Number = 76;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 341; @position = 18; @symbol_constdef = [y,341,18,19]; @symbol_type<0> = [Number,341,23,29]; ]
+            const y as Number = 131;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 344; @symbol_moduledef = [system_icon_dark__search,344,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 344; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 345; @position = 18; @symbol_constdef = [filename,345,18,26]; @symbol_type<0> = [String,345,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__search.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 346; @position = 18; @symbol_constdef = [compress,346,18,26]; @symbol_type<0> = [String,346,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 347; @position = 18; @symbol_constdef = [dithering,347,18,27]; @symbol_type<0> = [String,347,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 348; @position = 18; @symbol_constdef = [automaticPalette,348,18,34]; @symbol_type<0> = [String,348,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 349; @position = 18; @symbol_constdef = [packingFormat,349,18,31]; @symbol_type<0> = [String,349,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 352; @symbol_moduledef = [activity_color_light__text,352,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 352; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 354 18 ]
+                symbol [ Graphics %tmp.35 354 31 39 ];
+                %tmp.35 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.36 354 40 57 ];
+                %tmp.36 = getv %tmp.35 :COLOR_TRANSPARENT;
+                putv self :background %tmp.36;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 353; @position = 18; @symbol_constdef = [color,353,18,23]; @symbol_type<0> = [Number,353,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 354; @position = 18; @symbol_constdef = [background,354,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 357; @symbol_moduledef = [confirmation_icon__hint_keep,357,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 357; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 358; @position = 18; @symbol_constdef = [filename,358,18,26]; @symbol_type<0> = [String,358,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 359; @position = 18; @symbol_constdef = [dithering,359,18,27]; @symbol_type<0> = [String,359,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 360; @position = 18; @symbol_constdef = [packingFormat,360,18,31]; @symbol_type<0> = [String,360,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 363; @symbol_moduledef = [system_icon_dark__save,363,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 363; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 364; @position = 18; @symbol_constdef = [filename,364,18,26]; @symbol_type<0> = [String,364,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__save.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 365; @position = 18; @symbol_constdef = [compress,365,18,26]; @symbol_type<0> = [String,365,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 366; @position = 18; @symbol_constdef = [dithering,366,18,27]; @symbol_type<0> = [String,366,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 367; @position = 18; @symbol_constdef = [automaticPalette,367,18,34]; @symbol_type<0> = [String,367,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 368; @position = 18; @symbol_constdef = [packingFormat,368,18,31]; @symbol_type<0> = [String,368,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 371; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,371,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 371; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 372; @position = 18; @symbol_constdef = [filename,372,18,26]; @symbol_type<0> = [String,372,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_destructive__hint_button_left_middle.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 373; @position = 18; @symbol_constdef = [dithering,373,18,27]; @symbol_type<0> = [String,373,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 374; @position = 18; @symbol_constdef = [packingFormat,374,18,31]; @symbol_type<0> = [String,374,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 377; @symbol_moduledef = [system_icon_light__search,377,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 377; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 378; @position = 18; @symbol_constdef = [filename,378,18,26]; @symbol_type<0> = [String,378,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__search.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 379; @position = 18; @symbol_constdef = [compress,379,18,26]; @symbol_type<0> = [String,379,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 380; @position = 18; @symbol_constdef = [dithering,380,18,27]; @symbol_type<0> = [String,380,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 381; @position = 18; @symbol_constdef = [automaticPalette,381,18,34]; @symbol_type<0> = [String,381,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 382; @position = 18; @symbol_constdef = [packingFormat,382,18,31]; @symbol_type<0> = [String,382,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 385; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,385,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 385; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 386; @position = 18; @symbol_constdef = [filename,386,18,26]; @symbol_type<0> = [String,386,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 387; @position = 18; @symbol_constdef = [dithering,387,18,27]; @symbol_type<0> = [String,387,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 388; @position = 18; @symbol_constdef = [packingFormat,388,18,31]; @symbol_type<0> = [String,388,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 391; @symbol_moduledef = [system_icon_positive__hint_button_left_top,391,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 391; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 392; @position = 18; @symbol_constdef = [filename,392,18,26]; @symbol_type<0> = [String,392,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_positive__hint_button_left_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 393; @position = 18; @symbol_constdef = [dithering,393,18,27]; @symbol_type<0> = [String,393,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 394; @position = 18; @symbol_constdef = [packingFormat,394,18,31]; @symbol_type<0> = [String,394,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 397; @symbol_moduledef = [system_loc__hint_button_right_bottom,397,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 397; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 398; @position = 18; @symbol_constdef = [x,398,18,19]; @symbol_type<0> = [Number,398,23,29]; ]
+            const x as Number = 369;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 399; @position = 18; @symbol_constdef = [y,399,18,19]; @symbol_type<0> = [Number,399,23,29]; ]
+            const y as Number = 283;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 402; @symbol_moduledef = [confirmation_icon_dark__hint_reject,402,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 402; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 403; @position = 18; @symbol_constdef = [filename,403,18,26]; @symbol_type<0> = [String,403,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 404; @position = 18; @symbol_constdef = [dithering,404,18,27]; @symbol_type<0> = [String,404,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 405; @position = 18; @symbol_constdef = [packingFormat,405,18,31]; @symbol_type<0> = [String,405,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 408; @symbol_moduledef = [confirmation_color_dark__body,408,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 408; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 410 18 ]
+                symbol [ Graphics %tmp.37 410 31 39 ];
+                %tmp.37 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.38 410 40 57 ];
+                %tmp.38 = getv %tmp.37 :COLOR_TRANSPARENT;
+                putv self :background %tmp.38;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 409; @position = 18; @symbol_constdef = [color,409,18,23]; @symbol_type<0> = [Number,409,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 410; @position = 18; @symbol_constdef = [background,410,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 413; @symbol_moduledef = [confirmation_icon_light__hint_confirm,413,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 413; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 414; @position = 18; @symbol_constdef = [filename,414,18,26]; @symbol_type<0> = [String,414,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 415; @position = 18; @symbol_constdef = [dithering,415,18,27]; @symbol_type<0> = [String,415,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 416; @position = 18; @symbol_constdef = [packingFormat,416,18,31]; @symbol_type<0> = [String,416,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 419; @symbol_moduledef = [prompt_color_dark__title,419,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 419; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 421 18 ]
+                symbol [ Graphics %tmp.39 421 31 39 ];
+                %tmp.39 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.40 421 40 57 ];
+                %tmp.40 = getv %tmp.39 :COLOR_TRANSPARENT;
+                putv self :background %tmp.40;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 420; @position = 18; @symbol_constdef = [color,420,18,23]; @symbol_type<0> = [Number,420,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 421; @position = 18; @symbol_constdef = [background,421,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 424; @symbol_moduledef = [system_icon_destructive__cancel,424,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 424; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 425; @position = 18; @symbol_constdef = [filename,425,18,26]; @symbol_type<0> = [String,425,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_destructive__cancel.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 426; @position = 18; @symbol_constdef = [dithering,426,18,27]; @symbol_type<0> = [String,426,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 427; @position = 18; @symbol_constdef = [packingFormat,427,18,31]; @symbol_type<0> = [String,427,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 430; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,430,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 430; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 431; @position = 18; @symbol_constdef = [filename,431,18,26]; @symbol_type<0> = [String,431,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 432; @position = 18; @symbol_constdef = [dithering,432,18,27]; @symbol_type<0> = [String,432,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 433; @position = 18; @symbol_constdef = [packingFormat,433,18,31]; @symbol_type<0> = [String,433,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 436; @symbol_moduledef = [prompt_loc__title,436,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 436; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 437; @position = 18; @symbol_constdef = [x,437,18,19]; @symbol_type<0> = [Number,437,23,29]; ]
+            const x as Number = 83;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 438; @position = 18; @symbol_constdef = [y,438,18,19]; @symbol_type<0> = [Number,438,23,29]; ]
+            const y as Number = 34;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 441; @symbol_moduledef = [confirmation_font_enhanced_readability__body,441,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 441; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 442; @position = 18; @symbol_constdef = [exclude,442,18,25]; @symbol_type<0> = [Boolean,442,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 445; @symbol_moduledef = [prompt_color_light__title,445,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 445; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 447 18 ]
+                symbol [ Graphics %tmp.41 447 31 39 ];
+                %tmp.41 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.42 447 40 57 ];
+                %tmp.42 = getv %tmp.41 :COLOR_TRANSPARENT;
+                putv self :background %tmp.42;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 446; @position = 18; @symbol_constdef = [color,446,18,23]; @symbol_type<0> = [Number,446,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 447; @position = 18; @symbol_constdef = [background,447,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 450; @symbol_moduledef = [system_icon_dark__hint_button_right_top,450,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 450; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 451; @position = 18; @symbol_constdef = [filename,451,18,26]; @symbol_type<0> = [String,451,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 452; @position = 18; @symbol_constdef = [dithering,452,18,27]; @symbol_type<0> = [String,452,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 453; @position = 18; @symbol_constdef = [packingFormat,453,18,31]; @symbol_type<0> = [String,453,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 456; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,456,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 456; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 457; @position = 18; @symbol_constdef = [filename,457,18,26]; @symbol_type<0> = [String,457,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__hint_button_left_middle.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 458; @position = 18; @symbol_constdef = [dithering,458,18,27]; @symbol_type<0> = [String,458,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 459; @position = 18; @symbol_constdef = [packingFormat,459,18,31]; @symbol_type<0> = [String,459,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 462; @symbol_moduledef = [confirmation_icon_dark__hint_keep,462,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 462; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 463; @position = 18; @symbol_constdef = [filename,463,18,26]; @symbol_type<0> = [String,463,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 464; @position = 18; @symbol_constdef = [dithering,464,18,27]; @symbol_type<0> = [String,464,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 465; @position = 18; @symbol_constdef = [packingFormat,465,18,31]; @symbol_type<0> = [String,465,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 468; @symbol_moduledef = [system_icon_light__cancel,468,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 468; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 469; @position = 18; @symbol_constdef = [filename,469,18,26]; @symbol_type<0> = [String,469,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__cancel.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 470; @position = 18; @symbol_constdef = [compress,470,18,26]; @symbol_type<0> = [String,470,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 471; @position = 18; @symbol_constdef = [dithering,471,18,27]; @symbol_type<0> = [String,471,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 472; @position = 18; @symbol_constdef = [automaticPalette,472,18,34]; @symbol_type<0> = [String,472,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 473; @position = 18; @symbol_constdef = [packingFormat,473,18,31]; @symbol_type<0> = [String,473,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 476; @symbol_moduledef = [confirmation_icon_light__hint_reject,476,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 476; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 477; @position = 18; @symbol_constdef = [filename,477,18,26]; @symbol_type<0> = [String,477,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 478; @position = 18; @symbol_constdef = [dithering,478,18,27]; @symbol_type<0> = [String,478,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 479; @position = 18; @symbol_constdef = [packingFormat,479,18,31]; @symbol_type<0> = [String,479,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 482; @symbol_moduledef = [system_icon_light__about,482,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 482; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 483; @position = 18; @symbol_constdef = [filename,483,18,26]; @symbol_type<0> = [String,483,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__about.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 484; @position = 18; @symbol_constdef = [compress,484,18,26]; @symbol_type<0> = [String,484,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 485; @position = 18; @symbol_constdef = [dithering,485,18,27]; @symbol_type<0> = [String,485,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 486; @position = 18; @symbol_constdef = [automaticPalette,486,18,34]; @symbol_type<0> = [String,486,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 487; @position = 18; @symbol_constdef = [packingFormat,487,18,31]; @symbol_type<0> = [String,487,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 490; @symbol_moduledef = [system_size__toast_icon,490,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 490; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 491; @position = 18; @symbol_constdef = [scaleX,491,18,24]; @symbol_type<0> = [Number,491,28,34]; ]
+            const scaleX as Number = 45;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 492; @position = 18; @symbol_constdef = [scaleY,492,18,24]; @symbol_type<0> = [Number,492,28,34]; ]
+            const scaleY as Number = 45;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 493; @position = 18; @symbol_constdef = [scaleRelativeTo,493,18,33]; @symbol_type<0> = [String,493,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 496; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,496,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 496; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 497; @position = 18; @symbol_constdef = [exclude,497,18,25]; @symbol_type<0> = [Boolean,497,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 500; @symbol_moduledef = [confirmation_icon__hint_reject,500,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 500; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 501; @position = 18; @symbol_constdef = [filename,501,18,26]; @symbol_type<0> = [String,501,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 502; @position = 18; @symbol_constdef = [dithering,502,18,27]; @symbol_type<0> = [String,502,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 503; @position = 18; @symbol_constdef = [packingFormat,503,18,31]; @symbol_type<0> = [String,503,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 506; @symbol_moduledef = [system_icon_light__hint_action_menu,506,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 506; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 507; @position = 18; @symbol_constdef = [filename,507,18,26]; @symbol_type<0> = [String,507,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 508; @position = 18; @symbol_constdef = [dithering,508,18,27]; @symbol_type<0> = [String,508,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [packingFormat,509,18,31]; @symbol_type<0> = [String,509,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 512; @symbol_moduledef = [system_icon_light__hint_button_right_middle,512,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 512; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 513; @position = 18; @symbol_constdef = [exclude,513,18,25]; @symbol_type<0> = [Boolean,513,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 516; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,516,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 516; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 517; @position = 18; @symbol_constdef = [exclude,517,18,25]; @symbol_type<0> = [Boolean,517,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 520; @symbol_moduledef = [confirmation_loc__hint_reject,520,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 520; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 521; @position = 18; @symbol_constdef = [x,521,18,19]; @symbol_type<0> = [Number,521,23,29]; ]
+            const x as Number = 16;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 522; @position = 18; @symbol_constdef = [y,522,18,19]; @symbol_type<0> = [Number,522,23,29]; ]
+            const y as Number = 284;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 525; @symbol_moduledef = [confirmation_icon_dark__hint_delete,525,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 525; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 526; @position = 18; @symbol_constdef = [filename,526,18,26]; @symbol_type<0> = [String,526,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 527; @position = 18; @symbol_constdef = [dithering,527,18,27]; @symbol_type<0> = [String,527,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 528; @position = 18; @symbol_constdef = [packingFormat,528,18,31]; @symbol_type<0> = [String,528,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 531; @symbol_moduledef = [activity_color_dark__background,531,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 531; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 532; @position = 18; @symbol_constdef = [color,532,18,23]; @symbol_type<0> = [Number,532,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 533; @position = 18; @symbol_constdef = [background,533,18,28]; @symbol_type<0> = [Number,533,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 536; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,536,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 536; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 537; @position = 18; @symbol_constdef = [filename,537,18,26]; @symbol_type<0> = [String,537,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 538; @position = 18; @symbol_constdef = [dithering,538,18,27]; @symbol_type<0> = [String,538,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 539; @position = 18; @symbol_constdef = [packingFormat,539,18,31]; @symbol_type<0> = [String,539,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 542; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,542,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 542; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 543; @position = 18; @symbol_constdef = [filename,543,18,26]; @symbol_type<0> = [String,543,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_positive__hint_button_left_middle.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [dithering,544,18,27]; @symbol_type<0> = [String,544,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 545; @position = 18; @symbol_constdef = [packingFormat,545,18,31]; @symbol_type<0> = [String,545,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 548; @symbol_moduledef = [system_size__menu_icon,548,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 548; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 549; @position = 18; @symbol_constdef = [scaleX,549,18,24]; @symbol_type<0> = [Number,549,28,34]; ]
+            const scaleX as Number = 55;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 550; @position = 18; @symbol_constdef = [scaleY,550,18,24]; @symbol_type<0> = [Number,550,28,34]; ]
+            const scaleY as Number = 55;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 551; @position = 18; @symbol_constdef = [scaleRelativeTo,551,18,33]; @symbol_type<0> = [String,551,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 554; @symbol_moduledef = [system_icon_destructive__warning,554,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 554; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 555; @position = 18; @symbol_constdef = [filename,555,18,26]; @symbol_type<0> = [String,555,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_destructive__warning.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [dithering,556,18,27]; @symbol_type<0> = [String,556,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 557; @position = 18; @symbol_constdef = [packingFormat,557,18,31]; @symbol_type<0> = [String,557,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 560; @symbol_moduledef = [system_loc__hint_button_right_middle,560,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 560; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 561; @position = 18; @symbol_constdef = [exclude,561,18,25]; @symbol_type<0> = [Boolean,561,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 564; @symbol_moduledef = [system_icon_dark__cancel,564,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 564; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 565; @position = 18; @symbol_constdef = [filename,565,18,26]; @symbol_type<0> = [String,565,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__cancel.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 566; @position = 18; @symbol_constdef = [compress,566,18,26]; @symbol_type<0> = [String,566,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 567; @position = 18; @symbol_constdef = [dithering,567,18,27]; @symbol_type<0> = [String,567,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [automaticPalette,568,18,34]; @symbol_type<0> = [String,568,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 569; @position = 18; @symbol_constdef = [packingFormat,569,18,31]; @symbol_type<0> = [String,569,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 572; @symbol_moduledef = [prompt_size__body_with_title,572,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 572; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 573; @position = 18; @symbol_constdef = [width,573,18,23]; @symbol_type<0> = [Number,573,27,33]; ]
+            const width as Number = 302;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 574; @position = 18; @symbol_constdef = [height,574,18,24]; @symbol_type<0> = [Number,574,28,34]; ]
+            const height as Number = 254;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 577; @symbol_moduledef = [system_loc__hint_button_right_top,577,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 577; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 578; @position = 18; @symbol_constdef = [x,578,18,19]; @symbol_type<0> = [Number,578,23,29]; ]
+            const x as Number = 379;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 579; @position = 18; @symbol_constdef = [y,579,18,19]; @symbol_type<0> = [Number,579,23,29]; ]
+            const y as Number = 89;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 582; @symbol_moduledef = [system_color_light__text,582,15,39]; ]
+        module system_color_light__text {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 582; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 584 18 ]
+                symbol [ Graphics %tmp.43 584 31 39 ];
+                %tmp.43 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.44 584 40 57 ];
+                %tmp.44 = getv %tmp.43 :COLOR_TRANSPARENT;
+                putv self :background %tmp.44;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 583; @position = 18; @symbol_constdef = [color,583,18,23]; @symbol_type<0> = [Number,583,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 584; @position = 18; @symbol_constdef = [background,584,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 587; @symbol_moduledef = [system_icon_light__check,587,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 587; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 588; @position = 18; @symbol_constdef = [filename,588,18,26]; @symbol_type<0> = [String,588,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__check.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 589; @position = 18; @symbol_constdef = [compress,589,18,26]; @symbol_type<0> = [String,589,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 590; @position = 18; @symbol_constdef = [dithering,590,18,27]; @symbol_type<0> = [String,590,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 591; @position = 18; @symbol_constdef = [automaticPalette,591,18,34]; @symbol_type<0> = [String,591,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [packingFormat,592,18,31]; @symbol_type<0> = [String,592,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 595; @symbol_moduledef = [confirmation_input__reject,595,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 595; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 596 18 ]
+                symbol [ WatchUi %tmp.45 596 27 34 ];
+                %tmp.45 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.46 596 35 43 ];
+                %tmp.46 = getv %tmp.45 :KEY_DOWN;
+                putv self :button %tmp.46;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 596; @position = 18; @symbol_constdef = [button,596,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 599; @symbol_moduledef = [system_icon_light__revert,599,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 599; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 600; @position = 18; @symbol_constdef = [filename,600,18,26]; @symbol_type<0> = [String,600,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__revert.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 601; @position = 18; @symbol_constdef = [compress,601,18,26]; @symbol_type<0> = [String,601,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 602; @position = 18; @symbol_constdef = [dithering,602,18,27]; @symbol_type<0> = [String,602,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 603; @position = 18; @symbol_constdef = [automaticPalette,603,18,34]; @symbol_type<0> = [String,603,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 604; @position = 18; @symbol_constdef = [packingFormat,604,18,31]; @symbol_type<0> = [String,604,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 607; @symbol_moduledef = [system_size__subwindow,607,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 607; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 608; @position = 18; @symbol_constdef = [exclude,608,18,25]; @symbol_type<0> = [Boolean,608,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 611; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,611,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 611; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 612; @position = 18; @symbol_constdef = [filename,612,18,26]; @symbol_type<0> = [String,612,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_positive__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 613; @position = 18; @symbol_constdef = [dithering,613,18,27]; @symbol_type<0> = [String,613,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [packingFormat,614,18,31]; @symbol_type<0> = [String,614,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 617; @symbol_moduledef = [system_icon_dark__check,617,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 617; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 618; @position = 18; @symbol_constdef = [filename,618,18,26]; @symbol_type<0> = [String,618,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__check.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [compress,619,18,26]; @symbol_type<0> = [String,619,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 620; @position = 18; @symbol_constdef = [dithering,620,18,27]; @symbol_type<0> = [String,620,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 621; @position = 18; @symbol_constdef = [automaticPalette,621,18,34]; @symbol_type<0> = [String,621,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 622; @position = 18; @symbol_constdef = [packingFormat,622,18,31]; @symbol_type<0> = [String,622,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 625; @symbol_moduledef = [confirmation_loc__hint_keep,625,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 625; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 626; @position = 18; @symbol_constdef = [x,626,18,19]; @symbol_type<0> = [Number,626,23,29]; ]
+            const x as Number = 372;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 627; @position = 18; @symbol_constdef = [y,627,18,19]; @symbol_type<0> = [Number,627,23,29]; ]
+            const y as Number = 286;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 630; @symbol_moduledef = [confirmation_loc__hint_delete,630,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 630; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 631; @position = 18; @symbol_constdef = [x,631,18,19]; @symbol_type<0> = [Number,631,23,29]; ]
+            const x as Number = 16;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 632; @position = 18; @symbol_constdef = [y,632,18,19]; @symbol_type<0> = [Number,632,23,29]; ]
+            const y as Number = 284;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 635; @symbol_moduledef = [system_icon_positive__hint_action_menu,635,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 635; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 636; @position = 18; @symbol_constdef = [filename,636,18,26]; @symbol_type<0> = [String,636,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 637; @position = 18; @symbol_constdef = [dithering,637,18,27]; @symbol_type<0> = [String,637,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 638; @position = 18; @symbol_constdef = [packingFormat,638,18,31]; @symbol_type<0> = [String,638,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 641; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,641,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 641; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 642; @position = 18; @symbol_constdef = [exclude,642,18,25]; @symbol_type<0> = [Boolean,642,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 645; @symbol_moduledef = [system_icon_light__hint_button_left_middle,645,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 645; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 646; @position = 18; @symbol_constdef = [filename,646,18,26]; @symbol_type<0> = [String,646,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__hint_button_left_middle.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 647; @position = 18; @symbol_constdef = [dithering,647,18,27]; @symbol_type<0> = [String,647,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 648; @position = 18; @symbol_constdef = [packingFormat,648,18,31]; @symbol_type<0> = [String,648,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 651; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,651,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 651; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 652; @position = 18; @symbol_constdef = [filename,652,18,26]; @symbol_type<0> = [String,652,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 653; @position = 18; @symbol_constdef = [dithering,653,18,27]; @symbol_type<0> = [String,653,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 654; @position = 18; @symbol_constdef = [packingFormat,654,18,31]; @symbol_type<0> = [String,654,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 657; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,657,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 657; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 658; @position = 18; @symbol_constdef = [filename,658,18,26]; @symbol_type<0> = [String,658,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 659; @position = 18; @symbol_constdef = [dithering,659,18,27]; @symbol_type<0> = [String,659,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 660; @position = 18; @symbol_constdef = [packingFormat,660,18,31]; @symbol_type<0> = [String,660,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 663; @symbol_moduledef = [system_icon_dark__revert,663,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 663; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 664; @position = 18; @symbol_constdef = [filename,664,18,26]; @symbol_type<0> = [String,664,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__revert.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 665; @position = 18; @symbol_constdef = [compress,665,18,26]; @symbol_type<0> = [String,665,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 666; @position = 18; @symbol_constdef = [dithering,666,18,27]; @symbol_type<0> = [String,666,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 667; @position = 18; @symbol_constdef = [automaticPalette,667,18,34]; @symbol_type<0> = [String,667,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 668; @position = 18; @symbol_constdef = [packingFormat,668,18,31]; @symbol_type<0> = [String,668,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 671; @symbol_moduledef = [confirmation_icon_light__hint_delete,671,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 671; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 672; @position = 18; @symbol_constdef = [filename,672,18,26]; @symbol_type<0> = [String,672,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 673; @position = 18; @symbol_constdef = [dithering,673,18,27]; @symbol_type<0> = [String,673,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 674; @position = 18; @symbol_constdef = [packingFormat,674,18,31]; @symbol_type<0> = [String,674,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 677; @symbol_moduledef = [system_icon_dark__question,677,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 677; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 678; @position = 18; @symbol_constdef = [filename,678,18,26]; @symbol_type<0> = [String,678,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__question.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 679; @position = 18; @symbol_constdef = [compress,679,18,26]; @symbol_type<0> = [String,679,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 680; @position = 18; @symbol_constdef = [dithering,680,18,27]; @symbol_type<0> = [String,680,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 681; @position = 18; @symbol_constdef = [automaticPalette,681,18,34]; @symbol_type<0> = [String,681,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 682; @position = 18; @symbol_constdef = [packingFormat,682,18,31]; @symbol_type<0> = [String,682,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 685; @symbol_moduledef = [system_icon_light__discard,685,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 685; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 686; @position = 18; @symbol_constdef = [filename,686,18,26]; @symbol_type<0> = [String,686,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__discard.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 687; @position = 18; @symbol_constdef = [compress,687,18,26]; @symbol_type<0> = [String,687,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 688; @position = 18; @symbol_constdef = [dithering,688,18,27]; @symbol_type<0> = [String,688,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 689; @position = 18; @symbol_constdef = [automaticPalette,689,18,34]; @symbol_type<0> = [String,689,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 690; @position = 18; @symbol_constdef = [packingFormat,690,18,31]; @symbol_type<0> = [String,690,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 693; @symbol_moduledef = [device_info,693,15,26]; ]
+        module device_info {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 693; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 695 18 ]
+                symbol [ Toybox %tmp.48 695 32 38 ];
+                %tmp.48 = getv ? :Toybox;
+                symbol [ System %tmp.49 695 39 45 ];
+                %tmp.49 = getv %tmp.48 :System;
+                symbol [ SCREEN_SHAPE_ROUND %tmp.50 695 46 64 ];
+                %tmp.50 = getv %tmp.49 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.50;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 694; @position = 18; @symbol_constdef = [screenWidth,694,18,29]; @symbol_type<0> = [Number,694,33,39]; ]
+            const screenWidth as Number = 454;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 695; @position = 18; @symbol_constdef = [screenShape,695,18,29]; ]
+            const screenShape;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 696; @position = 18; @symbol_constdef = [hasNightMode,696,18,30]; @symbol_type<0> = [Boolean,696,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 697; @position = 18; @symbol_constdef = [hasGpu,697,18,24]; @symbol_type<0> = [Boolean,697,28,35]; ]
+            const hasGpu as Boolean = true;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 698; @position = 18; @symbol_constdef = [screenHeight,698,18,30]; @symbol_type<0> = [Number,698,34,40]; ]
+            const screenHeight as Number = 454;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 699; @position = 18; @symbol_constdef = [hasTouchScreen,699,18,32]; @symbol_type<0> = [Boolean,699,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 700; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,700,18,44]; @symbol_type<0> = [Boolean,700,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 703; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,703,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 703; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 704; @position = 18; @symbol_constdef = [filename,704,18,26]; @symbol_type<0> = [String,704,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 705; @position = 18; @symbol_constdef = [dithering,705,18,27]; @symbol_type<0> = [String,705,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 706; @position = 18; @symbol_constdef = [packingFormat,706,18,31]; @symbol_type<0> = [String,706,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 709; @symbol_moduledef = [prompt_font__body_no_title,709,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 709; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 710 18 ]
+                symbol [ Graphics %tmp.51 710 34 42 ];
+                %tmp.51 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.52 710 43 62 ];
+                %tmp.52 = getv %tmp.51 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.53 710 63 71 ];
+                %tmp.53 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.54 710 72 92 ];
+                %tmp.54 = getv %tmp.53 :TEXT_JUSTIFY_VCENTER;
+                %tmp.55 = bitor %tmp.52 %tmp.54;
+                putv self :justification %tmp.55;
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 711 18 ]
+                symbol [ Graphics %tmp.56 711 25 33 ];
+                %tmp.56 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.57 711 34 44 ];
+                %tmp.57 = getv %tmp.56 :FONT_XTINY;
+                putv self :font %tmp.57;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 710; @position = 18; @symbol_constdef = [justification,710,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 711; @position = 18; @symbol_constdef = [font,711,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 714; @symbol_moduledef = [prompt_size__title_icon,714,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 714; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 715; @position = 18; @symbol_constdef = [scaleX,715,18,24]; @symbol_type<0> = [Float,715,28,33]; ]
+            const scaleX as Float = 0.13;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 716; @position = 18; @symbol_constdef = [scaleRelativeTo,716,18,33]; @symbol_type<0> = [String,716,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 719; @symbol_moduledef = [system_icon_dark__warning,719,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 719; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 720; @position = 18; @symbol_constdef = [filename,720,18,26]; @symbol_type<0> = [String,720,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_dark__warning.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 721; @position = 18; @symbol_constdef = [compress,721,18,26]; @symbol_type<0> = [String,721,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 722; @position = 18; @symbol_constdef = [dithering,722,18,27]; @symbol_type<0> = [String,722,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 723; @position = 18; @symbol_constdef = [automaticPalette,723,18,34]; @symbol_type<0> = [String,723,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 724; @position = 18; @symbol_constdef = [packingFormat,724,18,31]; @symbol_type<0> = [String,724,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 727; @symbol_moduledef = [prompt_loc__title_icon,727,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 727; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 728; @position = 18; @symbol_constdef = [x,728,18,19]; @symbol_type<0> = [Number,728,23,29]; ]
+            const x as Number = 227;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 729; @position = 18; @symbol_constdef = [y,729,18,19]; @symbol_type<0> = [Number,729,23,29]; ]
+            const y as Number = 46;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 730; @position = 18; @symbol_constdef = [horizontalJustification,730,18,41]; @symbol_type<0> = [String,730,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 731; @position = 18; @symbol_constdef = [verticalJustification,731,18,39]; @symbol_type<0> = [String,731,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 734; @symbol_moduledef = [prompt_font_enhanced_readability__title,734,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 734; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 735; @position = 18; @symbol_constdef = [exclude,735,18,25]; @symbol_type<0> = [Boolean,735,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 738; @symbol_moduledef = [prompt_color_dark__body,738,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 738; ]
+            <init> {
+[ "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen" 740 18 ]
+                symbol [ Graphics %tmp.58 740 31 39 ];
+                %tmp.58 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.59 740 40 57 ];
+                %tmp.59 = getv %tmp.58 :COLOR_TRANSPARENT;
+                putv self :background %tmp.59;
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 739; @position = 18; @symbol_constdef = [color,739,18,23]; @symbol_type<0> = [Number,739,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 740; @position = 18; @symbol_constdef = [background,740,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 743; @symbol_moduledef = [confirmation_icon__hint_delete,743,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 743; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 744; @position = 18; @symbol_constdef = [filename,744,18,26]; @symbol_type<0> = [String,744,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 745; @position = 18; @symbol_constdef = [dithering,745,18,27]; @symbol_type<0> = [String,745,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 746; @position = 18; @symbol_constdef = [packingFormat,746,18,31]; @symbol_type<0> = [String,746,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 749; @symbol_moduledef = [system_icon_light__hint_button_right_top,749,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 749; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 750; @position = 18; @symbol_constdef = [filename,750,18,26]; @symbol_type<0> = [String,750,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 751; @position = 18; @symbol_constdef = [dithering,751,18,27]; @symbol_type<0> = [String,751,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 752; @position = 18; @symbol_constdef = [packingFormat,752,18,31]; @symbol_type<0> = [String,752,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 755; @symbol_moduledef = [confirmation_size__body,755,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 755; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 756; @position = 18; @symbol_constdef = [width,756,18,23]; @symbol_type<0> = [Number,756,27,33]; ]
+            const width as Number = 316;
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 757; @position = 18; @symbol_constdef = [height,757,18,24]; @symbol_type<0> = [Number,757,28,34]; ]
+            const height as Number = 246;
+        }
+        [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 760; @symbol_moduledef = [system_icon_positive__check,760,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 760; ]
+            <init> {
+            }
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 761; @position = 18; @symbol_constdef = [filename,761,18,26]; @symbol_type<0> = [String,761,30,36]; ]
+            const filename as String = "C:\\Users\\rados\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr965\\system_icon_positive__check.svg";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 762; @position = 18; @symbol_constdef = [dithering,762,18,27]; @symbol_type<0> = [String,762,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 763; @position = 18; @symbol_constdef = [packingFormat,763,18,31]; @symbol_type<0> = [String,763,35,41]; ]
+            const packingFormat as String = "png";
+        }
+    }
+}
+[ @file = "c:\Users\rados\Radek\Garmin\RebelBase\out\gen\006-B4315-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,50 @@
+REBEL BASE — Connect IQ store listing (Español)
+================================================
+
+NOMBRE DE LA APLICACIÓN
+Rebel Base
+
+DESCRIPCIÓN BREVE
+Esfera retro de ciencia ficción con gráficos vectoriales: tres estilos tácticos, cuentas atrás en vivo y datos reales de la Luna y el Sol.
+
+DESCRIPCIÓN
+Lleva en la muñeca una pantalla de centro de control de finales de los 70. Rebel Base lo dibuja todo con líneas vectoriales brillantes sobre negro, como un viejo ordenador táctico, y convierte tu día en cuentas atrás en vivo.
+
+TRES ESTILOS
+- Rastreador orbital: un gigante gaseoso ocupa la izquierda de la pantalla. Cada hora, una luna de malla de alambre cruza su superficie hacia un objetivo, y AL ALCANCE cuenta los minutos hasta que supera el borde del planeta. A la hora en punto el objetivo queda fijado y la cuenta atrás muestra AHORA. La línea de día y noche del planeta sigue tu amanecer y atardecer reales, y la luna muestra la fase actual.
+- Puntería: vuela por una trinchera de malla de alambre hacia una retícula. La cuenta atrás es el número de pasos que faltan para tu objetivo diario. Alcánzalo y el objetivo queda fijado con un destello pulsante.
+- Radar: un barrido da una vuelta por minuto, con puntos para la hora y el minuto. Las notificaciones sin leer aparecen como contactos que se iluminan cuando el barrido pasa sobre ellos.
+
+HAZLA TUYA
+- 10 colores para la pantalla principal, el acento y el planeta
+- 3 campos de datos: frecuencia cardiaca, batería, Body Battery, estrés, calorías, distancia, pisos, notificaciones, pasos, segundos, amanecer/atardecer, minutos de intensidad o altitud
+- Aviso de batería baja: la lectura de la batería cambia de color al 15 %
+- Segundos pequeños junto a la hora, opcionales
+- Dígitos inclinados y brillo CRT con líneas de barrido, opcionales
+- Icono del tiempo y temperatura desde tu reloj
+- Progreso del objetivo de pasos en el bisel (Puntería y Radar)
+
+MANTÉN PULSADA cualquier lectura para abrir su widget: frecuencia cardiaca, Body Battery, tiempo, pasos, notificaciones y más.
+
+COMPATIBLE CON ALWAYS-ON: una vista mínima y segura para pantallas AMOLED, con la hora y el contorno del estilo elegido.
+
+Cambia el estilo, los colores y los campos en el reloj (Pantalla del reloj, luego Personalizar) o en la aplicación Connect IQ.
+
+Idiomas: inglés, polaco, alemán, francés, español.
+
+PERMISOS
+- Historial de sensores: lee Body Battery y el estrés para los campos de datos.
+- Complicaciones: abre el widget correspondiente al mantener pulsada una lectura.
+
+Ningún dato sale de tu reloj.
+
+NOVEDADES (1.2)
+- Rastreador orbital: campo de estrellas
+- Puntería: contadores en movimiento, líneas de paneles en el suelo y las paredes, y corchetes que se cierran al acercarte a tu objetivo de pasos
+- Nuevas opciones: Dígitos inclinados y Brillo CRT
+- Nuevos campos de datos: próximo amanecer o atardecer, minutos de intensidad semanales, altitud
+- La batería cambia al color de acento al 15 % o menos
+- Alemán, francés y español
+- Hora en formato de 12 horas: sin cero inicial, con una A o P pequeña
+- Pisos muestra -- en relojes sin barómetro
+- Menos trabajo en segundo plano en el modo always-on

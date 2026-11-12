@@ -14,14 +14,18 @@ In targeting and radar, the 60 bezel ticks light up as you approach your step go
 
 `preview.png` shows each style, the goal burst, and the three always-on modes.
 
-**Languages:** English and Polish. The face, the on-watch Customize menu and the phone settings follow the watch's language. Text lives in `resources/strings/strings.xml` (English) and `resources-pol/strings/strings.xml` (Polish); to add a language, copy the English file into `resources-<code>/strings/` (for example `resources-deu` for German), translate it, and add `<iq:language>` to `manifest.xml`.
+**Languages:** English, Polish, German, French and Spanish. The face, the on-watch Customize menu and the phone settings follow the watch's language. Text lives in `resources/strings/strings.xml` (English) and `resources-pol/strings/strings.xml` (Polish); to add a language, copy the English file into `resources-<code>/strings/` (for example `resources-deu` for German), translate it, and add `<iq:language>` to `manifest.xml`.
+
+**Low battery:** the Battery field turns to the accent color at 15% or below.
+
+**12-hour time:** the leading zero is dropped and a small A or P follows the time.
 
 ## Build and run
 
 1. Install the **Connect IQ SDK Manager** from developer.garmin.com/connect-iq, download the latest SDK and the **Forerunner 965** device.
 2. Install **VS Code** and the **Monkey C** extension (by Garmin).
 3. In VS Code: Command Palette → **Monkey C: Generate a Developer Key** (once).
-4. Open this folder (`VectorRun`) in VS Code.
+4. Open this folder in VS Code.
 5. Try it in the simulator: **Run → Run Without Debugging**, pick `fr965`.
    - **Settings → Low Power Mode** toggles always-on mode.
    - **Simulation → Activity Data** fakes steps, heart rate, etc.
@@ -31,9 +35,9 @@ In targeting and radar, the 60 bezel ticks light up as you approach your step go
 
 ## Put it on the watch
 
-1. Command Palette → **Monkey C: Build for Device** → `fr965`. This produces `VectorRun.prg`.
+1. Command Palette → **Monkey C: Build for Device** → `fr965`. This produces a `.prg` file in `bin/` (for example `RebelBase.prg`).
 2. Connect the watch by USB. On Windows it appears as a drive; on a Mac use OpenMTP (the 965 uses MTP).
-3. Copy `VectorRun.prg` into `GARMIN/APPS/` on the watch and unplug.
+3. Copy the `.prg` file into `GARMIN/APPS/` on the watch and unplug.
 4. On the watch: hold **UP** (or long-press the watch face) → **Watch Face** → scroll to **Rebel Base**.
 
 Weather, sunrise/sunset and Body Battery come from the watch itself; weather needs the phone connected to Garmin Connect now and then. Until the watch has a location, day/night uses 06:00–18:00.
@@ -48,8 +52,10 @@ On the watch: long-press the face → **Watch Face** → Rebel Base → **Custom
 | Main color | 10 colors — time, text, lines | Green |
 | Accent color | 10 colors — markers and warnings | Red |
 | Planet color | 10 colors — gas giant, auto-shaded | Red |
-| Field 1 / 2 / 3 | Heart rate, Battery, Body Battery, Stress, Calories, Distance, Floors, Notifications, Steps, Seconds, None | HR / Battery / Steps |
+| Field 1 / 2 / 3 | Heart rate, Battery, Body Battery, Stress, Calories, Distance, Floors, Notifications, Steps, Seconds, Sunrise/sunset, Intensity minutes, Altitude, None | HR / Battery / Steps |
 | Show seconds | Small seconds after the time (screen awake only) | Off |
+| Slanted digits | Leans the seven-segment digits like a display typeface | Off |
+| CRT glow | Glow under the time and main outlines, plus scanlines (screen awake only) | Off |
 
 Where the fields appear: in orbit tracker, fields 1 and 2 share a line and field 3 is below. In targeting and radar, fields 1 and 2 are left and right, field 3 is lower left, and weather is lower right.
 

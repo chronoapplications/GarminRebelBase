@@ -60,6 +60,9 @@
             <listEntry value="7">@Strings.FieldNotifications</listEntry>
             <listEntry value="8">@Strings.FieldSteps</listEntry>
             <listEntry value="10">@Strings.FieldSeconds</listEntry>
+            <listEntry value="11">@Strings.FieldSunEvent</listEntry>
+            <listEntry value="12">@Strings.FieldIntensity</listEntry>
+            <listEntry value="13">@Strings.FieldAltitude</listEntry>
             <listEntry value="9">@Strings.FieldNone</listEntry>
         </settingConfig>
     </setting>
@@ -75,6 +78,9 @@
             <listEntry value="7">@Strings.FieldNotifications</listEntry>
             <listEntry value="8">@Strings.FieldSteps</listEntry>
             <listEntry value="10">@Strings.FieldSeconds</listEntry>
+            <listEntry value="11">@Strings.FieldSunEvent</listEntry>
+            <listEntry value="12">@Strings.FieldIntensity</listEntry>
+            <listEntry value="13">@Strings.FieldAltitude</listEntry>
             <listEntry value="9">@Strings.FieldNone</listEntry>
         </settingConfig>
     </setting>
@@ -90,10 +96,19 @@
             <listEntry value="7">@Strings.FieldNotifications</listEntry>
             <listEntry value="8">@Strings.FieldSteps</listEntry>
             <listEntry value="10">@Strings.FieldSeconds</listEntry>
+            <listEntry value="11">@Strings.FieldSunEvent</listEntry>
+            <listEntry value="12">@Strings.FieldIntensity</listEntry>
+            <listEntry value="13">@Strings.FieldAltitude</listEntry>
             <listEntry value="9">@Strings.FieldNone</listEntry>
         </settingConfig>
     </setting>
     <setting propertyKey="@Properties.ShowSeconds" title="@Strings.ShowSecondsTitle">
+        <settingConfig type="boolean"/>
+    </setting>
+    <setting propertyKey="@Properties.SlantDigits" title="@Strings.SlantTitle">
+        <settingConfig type="boolean"/>
+    </setting>
+    <setting propertyKey="@Properties.CrtGlow" title="@Strings.CrtTitle">
         <settingConfig type="boolean"/>
     </setting>
 </settings>

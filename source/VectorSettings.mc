@@ -14,8 +14,14 @@ class VectorSettingsMenu extends WatchUi.Menu2 {
         addEntry(Rez.Strings.Field1Title, "Field1");
         addEntry(Rez.Strings.Field2Title, "Field2");
         addEntry(Rez.Strings.Field3Title, "Field3");
-        addItem(new WatchUi.ToggleMenuItem($.str(Rez.Strings.ShowSecondsTitle), null, :ShowSeconds,
-                                           $.showSeconds(), null));
+        addToggle(Rez.Strings.ShowSecondsTitle, "ShowSeconds");
+        addToggle(Rez.Strings.SlantTitle, "SlantDigits");
+        addToggle(Rez.Strings.CrtTitle, "CrtGlow");
+    }
+
+    // On/off item; its id is the property key.
+    private function addToggle(labelId as ResourceId, key as String) as Void {
+        addItem(new WatchUi.ToggleMenuItem($.str(labelId), null, key, $.getBool(key), null));
     }
 
     private function addEntry(labelId as ResourceId, key as String) as Void {
@@ -35,7 +41,8 @@ class VectorSettingsDelegate extends WatchUi.Menu2InputDelegate {
 
     function onSelect(item as MenuItem) as Void {
         if (item instanceof WatchUi.ToggleMenuItem) {
-            Application.Properties.setValue("ShowSeconds", (item as WatchUi.ToggleMenuItem).isEnabled());
+            Application.Properties.setValue(item.getId() as String, (item as WatchUi.ToggleMenuItem).isEnabled());
+            $.settingsDirty = true;
             WatchUi.requestUpdate();
             return;
         }
@@ -55,11 +62,15 @@ class ListPickerMenu extends WatchUi.Menu2 {
         var names = $.namesFor(key);
         var current = $.getProp(key, $.settingDefault(key));
         var mark = $.str(Rez.Strings.Current);
-        // field lists show Seconds (stored as 10) above None (9)
+        // field lists show None (stored as 9) last, after the newer fields
         var isField = key.find("Field") != null;
+        var last = names.size() - 1;
         var focus = -1;
-        for (var pos = 0; pos < names.size(); pos++) {
-            var i = (isField && pos >= 9) ? 19 - pos : pos;
+        for (var pos = 0; pos <= last; pos++) {
+            var i = pos;
+            if (isField && pos >= 9) {
+                i = (pos == last) ? 9 : pos + 1;
+            }
             addItem(new WatchUi.MenuItem(names[i], i == current ? mark : null, i, null));
             if (i == current) {
                 focus = pos;
@@ -85,6 +96,7 @@ class ListPickerDelegate extends WatchUi.Menu2InputDelegate {
     function onSelect(item as MenuItem) as Void {
         var idx = item.getId() as Number;
         Application.Properties.setValue(_key, idx);
+        $.settingsDirty = true;
         _parent.setSubLabel($.namesFor(_key)[idx]);
         WatchUi.popView(WatchUi.SLIDE_RIGHT);
         WatchUi.requestUpdate();

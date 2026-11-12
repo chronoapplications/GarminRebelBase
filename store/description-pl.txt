@@ -9,8 +9,10 @@ TRZY STYLE
 
 DOPASUJ DO SIEBIE
 - 10 kolorów dla głównego wyświetlacza, akcentu i planety
-- 3 pola danych: tętno, bateria, Body Battery, stres, kalorie, dystans, piętra, powiadomienia, kroki lub sekundy
+- 3 pola danych: tętno, bateria, Body Battery, stres, kalorie, dystans, piętra, powiadomienia, kroki, sekundy, wschód/zachód słońca, minuty intensywne lub wysokość
+- Ostrzeżenie o niskim stanie baterii: odczyt zmienia kolor przy 15%
 - Opcjonalne małe sekundy obok godziny
+- Opcjonalne pochylone cyfry oraz poświata CRT z liniami
 - Ikona pogody i temperatura z zegarka
 - Postęp dziennego celu kroków na tarczy (Celowanie i Radar)
 
@@ -20,7 +22,7 @@ PRZYJAZNA TRYBOWI ALWAYS-ON: minimalistyczny widok chroniący ekrany AMOLED prze
 
 Styl, kolory i pola zmienisz na zegarku (Tarcza zegarka, a potem Dostosuj) albo w aplikacji Connect IQ.
 
-Języki: angielski, polski.
+Języki: angielski, polski, niemiecki, francuski, hiszpański.
 
 UPRAWNIENIA
 - Historia czujników: odczyt Body Battery i stresu do pól danych.
