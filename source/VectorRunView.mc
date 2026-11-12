@@ -512,7 +512,9 @@ class VectorRunView extends WatchUi.WatchFace {
             return hr == null ? "--" : (hr as Number).format("%d");
         }
         if (type == $.FIELD_BATTERY) {
-            return (data[:battery] as Number).format("%d") + (withPercent ? "%" : "");
+            // no "%" at 100: the extra character would change the layout
+            var bat = data[:battery] as Number;
+            return bat.format("%d") + (withPercent && bat < 100 ? "%" : "");
         }
         if (type == $.FIELD_BODY_BATTERY) { return numOrDash(_bodyBattery); }
         if (type == $.FIELD_STRESS) { return numOrDash(_stress); }
