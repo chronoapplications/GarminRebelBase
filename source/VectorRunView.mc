@@ -603,23 +603,26 @@ class VectorRunView extends WatchUi.WatchFace {
     }
 
     // Centre x for a side readout of width w: its usual spot (56 px from the
-    // edge) if that fits, otherwise slid toward the edge so it stays clear of
-    // `inner` (the graphic it sits next to).
+    // edge) if that fits between the progress ring and `inner` (the graphic it
+    // sits next to); otherwise moved to fit. A readout wider than that space
+    // stays clear of the graphic and runs toward the edge instead.
     private function sideX(w as Number, inner as Number, leftSide as Boolean) as Number {
         var m = s(6);       // gap to the graphic on the inner side
-        var e = s(10);      // gap to the screen edge / bezel ticks
-        if (leftSide) {
-            var x = s(56);
-            if (x > inner - m - w / 2) {
-                x = inner - m - w / 2;
+        var e = s(10);      // clear of the progress ring
+        // work on the left side; the right side is its mirror image
+        var hi = (leftSide ? inner : _w - inner) - m;
+        var x = s(56);
+        if (w > hi - e) {
+            x = hi - w / 2;
+            if (x - w / 2 < s(8)) {
+                x = s(8) + w / 2;
             }
-            return x < e + w / 2 ? e + w / 2 : x;
+        } else if (x + w / 2 > hi) {
+            x = hi - w / 2;
+        } else if (x - w / 2 < e) {
+            x = e + w / 2;
         }
-        var xr = _w - s(56);
-        if (xr < inner + m + w / 2) {
-            xr = inner + m + w / 2;
-        }
-        return xr > _w - e - w / 2 ? _w - e - w / 2 : xr;
+        return leftSide ? x : _w - x;
     }
 
     // ------------------------------------------------------- shared parts
@@ -630,19 +633,25 @@ class VectorRunView extends WatchUi.WatchFace {
         return r < 1 ? 1 : r;
     }
 
-    // 60 bezel ticks; lit ticks show progress toward the step goal.
+    // Thin ring at the very edge: a dim full circle with a bright arc that
+    // grows clockwise from 12 o'clock as steps approach the daily goal.
     private function drawStepBezel(dc as Dc, progress as Float) as Void {
-        var lit = (progress * 60).toNumber();
-        var rOut = _cx - s(4);
-        for (var i = 0; i < 60; i++) {
-            var a = i * Math.PI / 30.0;
-            var major = (i % 5 == 0);
-            var rIn = major ? rOut - s(18) : rOut - s(9);
-            dc.setPenWidth(major ? s(4) : s(2));
-            dc.setColor(i < lit ? _main : _dim, Graphics.COLOR_TRANSPARENT);
-            var sn = Math.sin(a);
-            var cs = Math.cos(a);
-            dc.drawLine(_cx + rIn * sn, _cy - rIn * cs, _cx + rOut * sn, _cy - rOut * cs);
+        var r = _cx - s(5);
+        dc.setPenWidth(1);
+        dc.setColor(_dim, Graphics.COLOR_TRANSPARENT);
+        dc.drawCircle(_cx, _cy, r);
+        if (progress <= 0.0) {
+            return;
+        }
+        dc.setPenWidth(s(2));
+        dc.setColor(_main, Graphics.COLOR_TRANSPARENT);
+        if (progress >= 1.0) {
+            dc.drawCircle(_cx, _cy, r);
+            return;
+        }
+        var sweep = (progress * 360).toNumber();
+        if (sweep >= 1) {
+            dc.drawArc(_cx, _cy, r, Graphics.ARC_CLOCKWISE, 90, 90 - sweep);
         }
     }
 
@@ -878,12 +887,17 @@ class VectorRunView extends WatchUi.WatchFace {
         }
         var half = dc.getTextWidthInPixels(fieldValue(type, data, true), Graphics.FONT_XTINY) / 2;
         var dy = s(354) + s(14) + dc.getFontHeight(Graphics.FONT_XTINY) * 35 / 100 - _cy;   // value's lower edge
-        var r = _cx - s(22);                                                                // inside the ticks
+        var r = _cx - s(14);                                                                // inside the ticks
         if (dy < r) {
             var minX = _cx - Math.sqrt(r * r - dy * dy).toNumber() + s(4) + half;
             if (x < minX) {
                 x = minX;
             }
+        }
+        // ... but never so far that the label or value reaches the countdown digits
+        var maxX = s(165) - s(8) - smallWidth(dc, type, data) / 2;
+        if (x > maxX) {
+            x = maxX;
         }
         return x;
     }
@@ -1125,7 +1139,20 @@ class VectorRunView extends WatchUi.WatchFace {
         }
         dc.drawText(irX, yIR, font, txt(:inRange), just);
         dc.setColor(locked || minsLeft <= 5 ? _accent : _main, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(s(290), yMin, Graphics.FONT_TINY, minText, just);
+        // a long word (French MAINTENANT) would run into the planet at this
+        // size, so it drops to the smaller font and keeps a gap to the edge
+        var minFont = Graphics.FONT_TINY;
+        var minDy = yMin - _cy;
+        var minRim = (_cx - s($.PLANET_OFFSET)) + Math.sqrt(pr * pr - minDy * minDy).toNumber() + s(18);
+        if (s(290) - dc.getTextWidthInPixels(minText, minFont) / 2 < minRim) {
+            minFont = font;
+        }
+        var minX = s(290);
+        var minLeft = minRim + dc.getTextWidthInPixels(minText, minFont) / 2;
+        if (minX < minLeft) {
+            minX = minLeft;
+        }
+        dc.drawText(minX, yMin, minFont, minText, just);
 
         // fields 1 and 2 share a line when it fits between the planet and the
         // screen edge; otherwise each gets its own line. Field 3 goes last.
